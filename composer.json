@@ -1,0 +1,9 @@
+{
+    "name": "pyro/accelerant-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Pyro\\AccelerantTheme\\": "src/"
+        }
+    }
+}

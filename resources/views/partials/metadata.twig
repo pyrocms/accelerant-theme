@@ -1,0 +1,33 @@
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>{{ trans('theme::control_panel.title') }} &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
+
+<!-- Favicon -->
+{#<link rel="icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}">#}
+{#<link rel="shortcut icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}">#}
+{#<link rel="apple-touch-icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}"/>#}
+
+{#{{ asset_add("theme.css", "theme::less/flat-ui/flat-ui.less") }}#}
+{#{{ asset_add("theme.css", "theme::less/fonts/fonts.less", ["parse"]) }}#}
+{{ asset_add("theme.css", "theme::less/bootstrap/bootstrap.less") }}
+{{ asset_add("build.css", "theme::less/theme/theme.less") }}
+
+{{ asset_add("theme.js", "theme::js/vendor/*") }}
+{{ asset_add("theme.js", "theme::js/libraries/tether.min.js") }}
+{{ asset_add("theme.js", "theme::js/libraries/*") }}
+{{ asset_add("theme.js", "theme::js/theme/*") }}
+
+{{ asset_style("theme.css") }}
+{{ asset_style("build.css", ["live"]) }}
+
+{{ constants() }}
+
+{% for style in asset_styles("styles.css") %}
+    {{ style|raw }}
+{% endfor %}
+
+{{ asset_script("theme.js") }}

@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+<head>
+    {% block metadata deferred %}
+    {% include "theme::partials/metadata" %}
+    {% endblock %}
+</head>
+
+<body>
+
+{#{% include "theme::partials/push" %}#}
+{#{% include "theme::partials/brand" %}#}
+{#{% include "theme::partials/navbar" %}#}
+{#{% include "theme::partials/header" %}#}
+
+<main id="main">
+
+    {#{% include "theme::partials/banner" %}#}
+    {#{% include "theme::partials/breadcrumbs" %}#}
+
+    <div class="container-fluid">
+        {#{% include "theme::partials/messages" %}#}
+    </div>
+
+    {% block content %}{% endblock %}
+
+</main>
+
+{#{% include "theme::partials/footer" %}#}
+{#{% include "theme::partials/modals" %}#}
+{#{% include "theme::partials/js" %}#}
+
+</body>
+</html>
