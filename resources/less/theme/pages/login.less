@@ -3,7 +3,7 @@
     min-width: 0;
 
     &.success {
-        .media-container {
+        .logo-container {
             left: -50%;
         }
 
@@ -12,7 +12,7 @@
         }
     }
 
-    .media-container {
+    .logo-container {
         left: 0;
         width: 50%;
         height: 100%;
@@ -21,7 +21,7 @@
         transition: left 300ms 500ms;
 
         .logo {
-            color: #c82ecb;
+            color: #ffffff;
             font-size: 6rem;
             margin-top: 40vh;
             font-weight: bold;
@@ -29,19 +29,11 @@
             font-family: 'Montserrat', sans-serif;
 
             span {
-                margin-left: 1rem;
                 font-size: 1.5rem;
+                margin-left: 1rem;
+                font-weight: normal;
                 color: rgba(255, 255, 255, 0.2);
             }
-        }
-
-        .overlay {
-            //width: 100%;
-            //height: 100%;
-            //opacity: 0.5;
-            //position: absolute;
-            //background: #000000;
-            //transition: opacity 500ms;
         }
     }
 
@@ -51,14 +43,45 @@
         height: 100%;
         position: absolute;
         transition: right 300ms 500ms;
-        background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); // Blue
-        background: linear-gradient(141deg, #ff754b 0%, #ff3160 75%); // Red
-        background: linear-gradient(141deg, #2cb5e8 0%, #6369c0 75%); // Blue 2
-        background: linear-gradient(141deg, #c61db4 0%, #b21cc3 51%, #a21acf 75%); // Purple
-        background: linear-gradient(141deg, #e3488b 0%, #c82ecb 51%, #b224d7 75%); // Purple 2
-        //background: linear-gradient(141deg, #0fdafd 0%, #01a5fb 51%, #8474ec 100%); // Blue 3
-        //background: linear-gradient(141deg, #11bef6 0%, #8726df 95%); // Blue 4
-        //background: linear-gradient(141deg, #daf32a 0%, #7ddd81 60%, #2ac4dd 100%); // Green
+
+        -webkit-animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        -moz-animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        background-size: 200% 200%;
+
+        @-webkit-keyframes LoginBackground {
+            0% {
+                background-position: 58% 0;
+            }
+            50% {
+                background-position: 43% 100%;
+            }
+            100% {
+                background-position: 58% 0;
+            }
+        }
+        @-moz-keyframes LoginBackground {
+            0% {
+                background-position: 58% 0;
+            }
+            50% {
+                background-position: 43% 100%;
+            }
+            100% {
+                background-position: 58% 0;
+            }
+        }
+        @keyframes LoginBackground {
+            0% {
+                background-position: 58% 0;
+            }
+            50% {
+                background-position: 43% 100%;
+            }
+            100% {
+                background-position: 58% 0;
+            }
+        }
 
         .login-wrapper {
             margin-top: 40vh;
@@ -71,4 +94,6 @@
             }
         }
     }
+
+    .login-variants();
 }
