@@ -12,7 +12,7 @@
 {#<link rel="apple-touch-icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}"/>#}
 
 {#{{ asset_add("theme.css", "theme::less/flat-ui/flat-ui.less") }}#}
-{#{{ asset_add("theme.css", "theme::less/fonts/fonts.less", ["parse"]) }}#}
+{{ asset_add("theme.css", "theme::less/fonts/fonts.less") }}
 {{ asset_add("theme.css", "theme::less/bootstrap/bootstrap.less") }}
 {{ asset_add("build.css", "theme::less/theme/theme.less") }}
 

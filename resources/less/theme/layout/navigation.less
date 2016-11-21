@@ -1,0 +1,123 @@
+#navigation {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 102;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+    background: #212121;
+    transition: all 200ms ease;
+
+    > ul {
+        padding: 0;
+        list-style: none;
+
+        > li {
+            width: 100%;
+
+            > a {
+                height: 100%;
+                display: block;
+                color: #ffffff;
+                font-size: 20px;
+                padding: 0 10px;
+                margin: 8px 10px;
+                line-height: 39px;
+                position: relative;
+                white-space: nowrap;
+                border-radius: @border-radius-base;
+
+                span {
+                    left: 45px;
+                    //position: absolute;
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    color: #eeeeee;
+                }
+            }
+
+            &.user {
+                height: 36px;
+                padding: 0 5px;
+                margin: 6px 8px 10px 8px;
+                color: #eeeeee;
+
+                img {
+                    width: 34px;
+                    border: 1px solid #ffffff;
+                }
+
+                .media-body {
+                    display: none;
+                    font-size: 14px;
+                    line-height: 1.3em;
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        white-space: nowrap;
+
+                        li {
+                            padding-left: 0;
+
+                            a {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 11px;
+                                line-height: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                a {
+                    color: #eeeeee;
+                    background: lighten(#212121, 10%);
+                }
+            }
+
+            > &:hover {
+                a {
+                    background: lighten(#212121, 3%);
+                }
+            }
+        }
+    }
+
+    > .more {
+        display: none;
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &.open,
+    &:hover {
+        width: 260px;
+
+        ul {
+            li {
+                a {
+                    span {
+                        visibility: visible;
+                    }
+                }
+
+                .media-body {
+                    display: table-cell;
+                }
+            }
+        }
+
+        > .more {
+            display: inherit;
+        }
+    }
+}

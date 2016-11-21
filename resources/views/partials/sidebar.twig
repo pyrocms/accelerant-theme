@@ -1,4 +1,4 @@
-<aside id="sidebar">
+<aside id="navigation">
 
     <ul>
         <li class="user">
@@ -28,7 +28,7 @@
             </div>
         </li>
 
-        {% for module in addons().modules.navigation() %}
+        {% for module in addons().modules().navigation() %}
             <li class="{{ module.active ? 'active' }}">
                 <a href="{{ url_to('admin/' ~ module.slug) }}">
                     {{ icon(module.icon) }}
