@@ -25,12 +25,12 @@
 
         {{ breadcrumb() }}
 
-        {#{% include "theme::partials/banner" %}#}
-        {#{% include "theme::partials/breadcrumbs" %}#}
-
         <div class="container-fluid">
-            {#{% include "theme::partials/messages" %}#}
+            {% include "theme::partials/buttons" %}
+            {% include "theme::partials/messages" %}
         </div>
+
+        <br>
 
         {% block content %}{% endblock %}
 
