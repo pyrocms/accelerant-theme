@@ -15,24 +15,27 @@
 {#{% include "theme::partials/navbar" %}#}
 {#{% include "theme::partials/header" %}#}
 
-{% include "theme::partials/topbar" %}
-{% include "theme::partials/sidebar" %}
-{% include "theme::partials/menu" %}
+<section id="app">
 
-<main id="main">
+    {% include "theme::partials/topbar" %}
+    {% include "theme::partials/sidebar" %}
+    {% include "theme::partials/menu" %}
 
-    {{ breadcrumb() }}
+    <main id="main">
 
-    {#{% include "theme::partials/banner" %}#}
-    {#{% include "theme::partials/breadcrumbs" %}#}
+        {{ breadcrumb() }}
 
-    <div class="container-fluid">
-        {#{% include "theme::partials/messages" %}#}
-    </div>
+        {#{% include "theme::partials/banner" %}#}
+        {#{% include "theme::partials/breadcrumbs" %}#}
 
-    {% block content %}{% endblock %}
+        <div class="container-fluid">
+            {#{% include "theme::partials/messages" %}#}
+        </div>
 
-</main>
+        {% block content %}{% endblock %}
+
+    </main>
+</section>
 
 {#{% include "theme::partials/footer" %}#}
 {% include "theme::partials/modals" %}
