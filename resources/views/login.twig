@@ -13,7 +13,7 @@
         <div class="login-wrapper container-fluid">
             <div class="col-lg-12 col-lg-offset-6">
 
-                {% set form = form('login').get() %}
+                {% set form = form('login').redirect('admin').get() %}
 
                 {{ form.open|raw }}
 

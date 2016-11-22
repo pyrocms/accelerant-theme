@@ -10,7 +10,7 @@
     .topbar-left {
         z-index: 1;
         float: left;
-        width: 240px;
+        width: 70px;
         height: 70px;
         position: relative;
         background-color: #f5f5f5;
@@ -24,6 +24,10 @@
         color: #212121 !important;
         text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
+
+        span {
+            display: none;
+        }
 
         svg {
             width: 35px;
@@ -117,14 +121,14 @@
     }
 }
 
-body.compact {
+body.expand {
     #topbar {
         .topbar-left {
-            width: 70px !important;
+            width: 240px !important;
 
             .logo {
                 span {
-                    display: none;
+                    display: inline-block;
                 }
             }
         }
