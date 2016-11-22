@@ -17,8 +17,11 @@
 
 {% include "theme::partials/topbar" %}
 {% include "theme::partials/sidebar" %}
+{% include "theme::partials/menu" %}
 
 <main id="main">
+
+    {{ breadcrumb() }}
 
     {#{% include "theme::partials/banner" %}#}
     {#{% include "theme::partials/breadcrumbs" %}#}

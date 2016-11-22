@@ -2,7 +2,7 @@
 
     <ul>
         {% for module in addons().modules().navigation() %}
-            <li class="{{ module.active ? 'active' }}">
+            <li class="{{ module.active ? 'active' }} variant-border">
                 <a href="{{ url_to('admin/' ~ module.slug) }}">
                     {{ icon(module.icon) }}
                     <span>{{ trans(module.title) }}</span>

@@ -1,18 +1,16 @@
-#sidebar {
+#menu {
     top: 70px;
     bottom: 0;
-    z-index: 3;
-    width: 240px;
+    left: 70px;
+    z-index: 2;
+    width: 170px;
     height: 100%;
     margin-top: 0;
     position: fixed;
     overflow-x: scroll;
-    background: #252525;
+    background: #333333;
     padding-bottom: 70px;
-    box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.15);
-
-    box-shadow: none; // COLLAPSE
-    width: 70px !important; // COLLAPSE
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 
     > ul {
         padding: 0;
@@ -23,21 +21,17 @@
 
             > a {
                 height: 100%;
-                margin: 8px 0;
                 display: block;
-                padding: 0 10px;
                 font-size: 18px;
+                padding: 0 10px;
+                margin: 8px 10px;
                 line-height: 39px;
                 position: relative;
                 white-space: nowrap;
                 color: rgba(255, 255, 255, 0.3);
 
-                text-align: center; // COLLAPSE
-
                 span {
-                    margin-left: 8px;
-
-                    display: none; // COLLAPSE
+                    margin-left: 7px;
                 }
 
                 &:hover {
@@ -46,12 +40,8 @@
             }
 
             &.active {
-                box-sizing: border-box;
-                border-left: 3px solid #fff;
-
                 a {
                     color: #eeeeee;
-                    background: #333333;
                 }
             }
         }
@@ -60,7 +50,6 @@
 
 body.compact {
     #sidebar {
-        box-shadow: none;
         width: 70px !important;
 
         a {
@@ -68,6 +57,13 @@ body.compact {
 
             span {
                 display: none;
+            }
+
+            &:hover {
+                span {
+                    // The hover tooltips
+                    //display: block;
+                }
             }
         }
     }

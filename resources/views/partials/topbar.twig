@@ -13,7 +13,7 @@
         <div class="container-fluid">
 
             <div class="pull-left">
-                <button type="button" class="button-menu-mobile open-left"
+                <button href="javascript:void(0);" type="button" class="button-menu-mobile"
                         onclick="$('body').toggleClass('compact');">
                     <i class="fa fa-bars"></i>
                 </button>
@@ -31,7 +31,7 @@
 
                     <a href="#" data-target="#" class="dropdown-toggle"
                        data-toggle="dropdown" aria-expanded="true">
-                        <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
+                        <i class="md md-notifications"></i> <span class="label label-xs label-danger">3</span>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg">
@@ -94,6 +94,7 @@
                         <img src="{{ user().gravatar }}" width="36" class="img-circle">
                     </a>
                     <ul class="dropdown-menu">
+                        <li><a href="/" target="_blank"><i class="md md-settings-power"></i> View Website</a></li>
                         <li><a href="/admin/logout"><i class="md md-settings-power"></i> Logout</a></li>
                     </ul>
                 </li>
