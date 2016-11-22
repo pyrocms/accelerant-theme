@@ -15,20 +15,24 @@
 {#{% include "theme::partials/navbar" %}#}
 {#{% include "theme::partials/header" %}#}
 
-{% include "theme::partials/sidebar" %}
+<div id="wrapper">
 
-<main id="main">
+    {% include "theme::partials/sidebar" %}
 
-    {#{% include "theme::partials/banner" %}#}
-    {#{% include "theme::partials/breadcrumbs" %}#}
+    <main id="main">
 
-    <div class="container-fluid">
-        {#{% include "theme::partials/messages" %}#}
-    </div>
+        {#{% include "theme::partials/banner" %}#}
+        {#{% include "theme::partials/breadcrumbs" %}#}
 
-    {% block content %}{% endblock %}
+        <div class="container-fluid">
+            {#{% include "theme::partials/messages" %}#}
+        </div>
 
-</main>
+        {% block content %}{% endblock %}
+
+    </main>
+
+</div>
 
 {#{% include "theme::partials/footer" %}#}
 {#{% include "theme::partials/modals" %}#}

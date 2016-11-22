@@ -1,15 +1,9 @@
 #navigation {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 102;
-    position: fixed;
-    overflow: hidden;
-    overflow-y: scroll;
+    z-index: 1;
+    position: relative;
     padding-bottom: 50px;
     background: #212121;
-    transition: all 200ms ease;
+    //transition: all 200ms ease;
 
     > ul {
         padding: 0;
@@ -33,7 +27,7 @@
                 span {
                     left: 45px;
                     //position: absolute;
-                    visibility: hidden;
+                    //visibility: hidden;
                 }
 
                 &:hover {
@@ -100,7 +94,7 @@
 
     &.open,
     &:hover {
-        width: 260px;
+        //width: 260px;
 
         ul {
             li {
