@@ -1,0 +1,127 @@
+#topbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    position: fixed;
+    background: #ffffff;
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.2);
+
+    .topbar-left {
+        z-index: 1;
+        float: left;
+        width: 240px;
+        height: 70px;
+        position: relative;
+        background-color: #eeeeee;
+    }
+
+    .logo {
+        font-size: 1.75rem;
+        font-weight: bold;
+        line-height: 70px;
+        letter-spacing: .05em;
+        color: #212121 !important;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+
+        svg {
+            width: 35px;
+            height: auto;
+            margin-top: -10px;
+            vertical-align: middle;
+        }
+
+        small {
+            font-size: .9rem;
+            margin-left: .25rem;
+            font-weight: normal;
+            color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .button-menu-mobile {
+        border: none;
+        color: #888888;
+        font-size: 21px;
+        padding: 0 15px;
+        line-height: 70px;
+        background: transparent;
+    }
+
+    .navbar-form {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .btn-search {
+        display: none;
+    }
+
+    .search-bar {
+        height: 50px;
+        color: #212121;
+        font-size: 14px;
+        margin-top: 3px;
+        border: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+
+    .navbar-default {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-color: #ffffff;
+    }
+
+    .nav {
+        > li {
+
+            .dropdown-menu {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+
+                .notification-title {
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 5px 0 10px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                .list-group {
+                    margin-bottom: 0;
+
+                    .list-group-item {
+                        border: none;
+                        border-radius: 0;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+
+            > a {
+                padding: 0 15px;
+                line-height: 70px;
+                position: relative;
+                color: #333333 !important;
+            }
+        }
+    }
+}
+
+body.compact {
+    #topbar {
+        .topbar-left {
+            width: 70px !important;
+
+            .logo {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -8,13 +8,14 @@
     {% endblock %}
 </head>
 
-<body>
+<body class="variant-{{ random(8) }}">
 
 {#{% include "theme::partials/push" %}#}
 {#{% include "theme::partials/brand" %}#}
 {#{% include "theme::partials/navbar" %}#}
 {#{% include "theme::partials/header" %}#}
 
+{% include "theme::partials/topbar" %}
 {% include "theme::partials/sidebar" %}
 
 <main id="main">
@@ -31,8 +32,8 @@
 </main>
 
 {#{% include "theme::partials/footer" %}#}
-{#{% include "theme::partials/modals" %}#}
-{#{% include "theme::partials/js" %}#}
+{% include "theme::partials/modals" %}
+{% include "theme::partials/js" %}
 
 </body>
 </html>

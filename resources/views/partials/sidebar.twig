@@ -1,49 +1,14 @@
-<aside id="navigation">
+<aside id="sidebar">
 
     <ul>
-        <li class="user">
-            <div class="media">
-                <div class="media-left">
-                    <img class="img-circle" src="https://gravatar.com/avatar/{{ md5(auth_user().email) }}">
-                </div>
-                <div class="media-body">
-                    <strong>
-                        {{ auth_user().getDisplayName() ?: auth_user().username }}
-                    </strong>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="{{ url_to('admin/logout') }}">
-                                {{ icon('power-off') }}
-                                {{ trans('theme::link.logout') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ url() }}" target="_blank">
-                                {{ icon('external-link') }}
-                                {{ trans('theme::link.view_site') }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-
         {% for module in addons().modules().navigation() %}
             <li class="{{ module.active ? 'active' }}">
                 <a href="{{ url_to('admin/' ~ module.slug) }}">
                     {{ icon(module.icon) }}
-                    <span>{{ trans(module.name) }}</span>
+                    <span>{{ trans(module.title) }}</span>
                 </a>
             </li>
         {% endfor %}
     </ul>
-
-    {#<ul class="list-unstyled more">
-        <li><a href="https://anomaly.is/" target="_blank" class="item">About </a></li>
-        <li><a href="https://pyrocms.com/" target="_blank" class="item">PyroCMS.com</a></li>
-        <li><a href="https://docs.pyrocms.com/" target="_blank" class="item">Documentation</a></li>
-        <li><a href="https://docs.pyrocms.com/" target="_blank" class="item">Support</a></li>
-        <li><a href="https://anomaly.is/contact" target="_blank" class="item">Feedback</a></li>
-    </ul>#}
 
 </aside>

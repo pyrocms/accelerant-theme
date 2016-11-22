@@ -6,11 +6,11 @@
     {% include "theme::partials/metadata" %}
 </head>
 
-<body id="login">
+<body id="login" class="variant-{{ random(8) }}">
 
 {% block content %}{% endblock %}
 
-{#{% include "theme::partials/js" %}#}
+{% include "theme::partials/js" %}
 
 </body>
 </html>

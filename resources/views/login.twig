@@ -1,54 +1,52 @@
 {% extends "pyro.theme.accelerant::layouts/login" %}
 
 {% block content %}
-    <div class="variant-{{ random(8) }}">
 
-        <div class="logo-container">
-            <div class="logo">
-                PYRO
-                <span>{{ config('streams::distribution.version') }}</span></div>
-            <div class="overlay"></div>
-        </div>
+    <div class="logo-container">
+        <div class="logo variant-color">
+            PYRO
+            <span>{{ config('streams::distribution.version') }}</span></div>
+        <div class="overlay"></div>
+    </div>
 
-        <div class="login-container">
-            <div class="login-wrapper container-fluid">
-                <div class="col-lg-12 col-lg-offset-6">
+    <div class="login-container variant-background">
+        <div class="login-wrapper container-fluid">
+            <div class="col-lg-12 col-lg-offset-6">
 
-                    {% set form = form('login').get() %}
+                {% set form = form('login').get() %}
 
-                    {{ form.open|raw }}
+                {{ form.open|raw }}
 
-                    <div class="form-group">
-                        {% if setting_value('anomaly.module.users::login') == 'username' %}
-                            {{ form.fields.username.input_name|raw }}
-                        {% else %}
-                            {{ form.fields.email.input|raw }}
-                        {% endif %}
-                    </div>
-
-                    <div class="form-group">
-                        {{ form.fields.password.input|raw }}
-                    </div>
-
-                    <div class="form-group checkbox pull-left">
-                        <label>
-                            {{ form_checkbox("remember", null, false, {'id': 'remember'}) }}
-                            {{ trans('anomaly.module.users::field.remember_me.name') }}
-                        </label>
-                    </div>
-
-                    <div class="form-group pull-right">
-                        <button type="submit" value="Login" class="btn btn-outline-white"
-                                onclick="$('body').addClass('success');">
-                            {{ trans('anomaly.module.users::button.login') }}
-                        </button>
-                    </div>
-
-                    {{ form.close|raw }}
-
+                <div class="form-group">
+                    {% if setting_value('anomaly.module.users::login') == 'username' %}
+                        {{ form.fields.username.input_name|raw }}
+                    {% else %}
+                        {{ form.fields.email.input|raw }}
+                    {% endif %}
                 </div>
+
+                <div class="form-group">
+                    {{ form.fields.password.input|raw }}
+                </div>
+
+                <div class="form-group checkbox pull-left">
+                    <label>
+                        {{ form_checkbox("remember", null, false, {'id': 'remember'}) }}
+                        {{ trans('anomaly.module.users::field.remember_me.name') }}
+                    </label>
+                </div>
+
+                <div class="form-group pull-right">
+                    <button type="submit" value="Login" class="btn btn-outline-white"
+                            onclick="$('body').addClass('success');">
+                        {{ trans('anomaly.module.users::button.login') }}
+                    </button>
+                </div>
+
+                {{ form.close|raw }}
+
             </div>
         </div>
-
     </div>
+
 {% endblock %}
