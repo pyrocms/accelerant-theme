@@ -3,18 +3,27 @@
     display:flex;
     min-height:100vh;
 }
-#main,#navigation
+#main,
+#navigation,
+#sidebar-beta
 {
     overflow: hidden;
     overflow-y: auto;
 }
 #main
 {
-    flex: 0 0 80vw;
-    max-width: 80vw;
+    flex: 0 0 70vw;
+    max-width: 70vw;
 }
 #navigation
 {
-    flex: 0 0 20vw;
-    max-width: 20vw;
+    flex: 0 0 15vw;
+    max-width: 15vw;
+}
+#sidebar-beta
+{
+    background:#333;
+    flex: 0 0 15vw;
+    max-width: 15vw;
+    color:#fff;
 }
