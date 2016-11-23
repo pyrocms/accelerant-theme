@@ -5,6 +5,10 @@
     }
 }
 
-.btn-outline-white {
+.btn-white-outline {
     @include button-outline-variant(#ffffff);
+}
+
+.btn-inverse-outline {
+    @include button-outline-variant($brand-inverse);
 }

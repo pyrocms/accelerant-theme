@@ -11,7 +11,7 @@
 
     <div class="login-container variant-background">
         <div class="login-wrapper container-fluid">
-            <div class="col-lg-12 col-lg-offset-6">
+            <div class="col-lg-12 offset-lg-6">
 
                 {% set form = form('login').redirect('admin').get() %}
 
@@ -19,14 +19,14 @@
 
                 <div class="form-group">
                     {% if setting_value('anomaly.module.users::login') == 'username' %}
-                        {{ form.fields.username.input_name|raw }}
+                        {{ form.fields.username.setPlaceholder(form.fields.username.label).input_name|raw }}
                     {% else %}
-                        {{ form.fields.email.input|raw }}
+                        {{ form.fields.email.setPlaceholder(form.fields.email.label).input|raw }}
                     {% endif %}
                 </div>
 
                 <div class="form-group">
-                    {{ form.fields.password.input|raw }}
+                    {{ form.fields.password.setPlaceholder(form.fields.password.label).input|raw }}
                 </div>
 
                 <div class="form-group checkbox pull-left">
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="form-group pull-right">
-                    <button type="submit" value="Login" class="btn btn-outline-white"
+                    <button type="submit" value="Login" class="btn btn-white-outline"
                             onclick="$('body').addClass('success');">
                         {{ trans('anomaly.module.users::button.login') }}
                     </button>

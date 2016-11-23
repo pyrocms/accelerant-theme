@@ -92,10 +92,16 @@
                     </a>
                     <ul class="dropdown-menu-right dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="/" target="_blank"><i class="fa fa-external-link"></i> View Website</a>
+                            <a href="/" target="_blank">
+                                <i class="fa fa-external-link"></i>
+                                {{ trans('theme::control_panel.view_site') }}
+                            </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="/admin/logout"><i class="fa fa-power-off"></i> Logout</a>
+                            <a href="/admin/logout">
+                                <i class="fa fa-power-off"></i>
+                                {{ trans('theme::control_panel.logout') }}
+                            </a>
                         </li>
                     </ul>
                 </li>

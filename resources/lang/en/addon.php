@@ -3,5 +3,5 @@
 return [
     'title'       => 'Accelerant',
     'name'        => 'Accelerant Theme',
-    'description' => ''
+    'description' => 'The official admin theme for PyroCMS.',
 ];

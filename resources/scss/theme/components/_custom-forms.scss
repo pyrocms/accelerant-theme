@@ -1,4 +1,4 @@
-.c-input {
+.custom-input {
 
     > input {
 
@@ -13,8 +13,11 @@
     }
 }
 
-.c-select {
+.custom-checkbox {
+    margin-bottom: 0;
+}
+
+.custom-select {
     line-height: 1;
     padding: 0.6rem 1.75rem 0.6rem 0.75rem;
-    @include border-radius($btn-border-radius);
 }
