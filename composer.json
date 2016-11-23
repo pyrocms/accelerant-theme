@@ -3,7 +3,7 @@
     "type": "streams-addon",
     "autoload": {
         "psr-4": {
-            "Pyro\\AccelerantTheme\\": "src/"
+            "Pyrocms\\AccelerantTheme\\": "src/"
         }
     }
 }

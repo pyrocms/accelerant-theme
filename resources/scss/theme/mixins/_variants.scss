@@ -1,7 +1,7 @@
 @mixin variant($index, $color1, $color2, $gradient) {
 
     /*.variant-#{$index}}-logo .st0, */
-    .variant-#{$index} .logo .st0 {
+    .variant-#{$index} .variant-logo .st0 {
         fill: $color1 !important;
     }
 

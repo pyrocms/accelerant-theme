@@ -1,0 +1,22 @@
+#installer {
+    background-image: none;
+
+    #main {
+        margin: 0 !important;
+    }
+
+    .logo {
+        margin-top: 5rem;
+        text-align: center;
+
+        svg {
+            width: 75px;
+            height: auto;
+            vertical-align: middle;
+
+            .st0 {
+                transition: fill 50ms;
+            }
+        }
+    }
+}

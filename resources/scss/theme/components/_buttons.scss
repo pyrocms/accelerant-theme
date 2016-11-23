@@ -1,4 +1,9 @@
 .btn {
+
+    &:not(.btn-default):not(.btn-link) {
+        @include shadow();
+    }
+
     &.btn-xs {
         font-size: $font-size-xs;
         padding: $spacer-x/3 $spacer-y/2;

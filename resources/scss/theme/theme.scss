@@ -18,11 +18,13 @@
 @import "components/cards";
 @import "components/forms";
 @import "components/trees";
+@import "components/alerts";
 @import "components/tables";
 @import "components/modals";
 @import "components/loader";
 @import "components/buttons";
 @import "components/variants";
+@import "components/utilities";
 @import "components/breadcrumb";
 @import "components/scaffolding";
 @import "components/input-group";
@@ -30,4 +32,4 @@
 
 // Pages
 @import "pages/login";
-//@import "pages/installer";
+@import "pages/installer";

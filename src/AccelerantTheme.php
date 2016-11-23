@@ -1,4 +1,4 @@
-<?php namespace Pyro\AccelerantTheme;
+<?php namespace Pyrocms\AccelerantTheme;
 
 use Anomaly\Streams\Platform\Addon\Theme\Theme;
 

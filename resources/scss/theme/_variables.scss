@@ -115,7 +115,7 @@ $body-color: $gray-dark !default;
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: none !default;
+$link-hover-decoration: underline !default;
 
 
 // Grid breakpoints
@@ -584,22 +584,22 @@ $jumbotron-bg:                   $gray-lighter !default;
 //
 // Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken($state-success-bg, 5%) !default;
+$state-success-text:             #ffffff !default;
+$state-success-bg:               $brand-success !default;
+$state-success-border:           $state-success-bg !default;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken($state-info-bg, 7%) !default;
+$state-info-text:                #ffffff !default;
+$state-info-bg:                  $brand-info !default;
+$state-info-border:              $state-info-bg !default;
 
-$state-warning-text:             #8a6d3b !default;
+$state-warning-text:             #ffffff !default;
 $state-warning-bg:               #fcf8e3 !default;
 $mark-bg:                        $state-warning-bg !default;
-$state-warning-border:           darken($state-warning-bg, 5%) !default;
+$state-warning-border:           $state-warning-bg !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken($state-danger-bg, 5%) !default;
+$state-danger-text:              #ffffff !default;
+$state-danger-bg:                $brand-danger !default;
+$state-danger-border:            $state-danger-bg !default;
 
 
 // Cards
@@ -714,7 +714,7 @@ $modal-sm:                    300px !default;
 
 $alert-padding-x:             1.25rem !default;
 $alert-padding-y:             .75rem !default;
-$alert-border-radius:         $border-radius !default;
+$alert-border-radius:         $border-radius-sm !default;
 $alert-link-font-weight:      bold !default;
 $alert-border-width:          $border-width !default;
 
@@ -737,8 +737,8 @@ $alert-danger-border:         $state-danger-border !default;
 
 // Progress bars
 
-$progress-bg:                 #eee !default;
-$progress-bar-color:          #0074d9 !default;
+$progress-bg:                 #cccccc !default;
+$progress-bar-color:          $brand-primary !default;
 $progress-border-radius:      $border-radius !default;
 $progress-box-shadow:         inset 0 .1rem .1rem rgba(0,0,0,.1) !default;
 
@@ -836,8 +836,8 @@ $carousel-icon-width:                         20px !default;
 // Close
 
 $close-font-weight:           bold !default;
-$close-color:                 #000 !default;
-$close-text-shadow:           0 1px 0 #fff !default;
+$close-color:                 #ffffff !default;
+$close-text-shadow:           1px 1px 0 rgba(66, 66, 66, 0.1) !default;
 
 
 // Code
