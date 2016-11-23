@@ -24,6 +24,10 @@ body.modal-open {
     background: rgba(255, 255, 255, 0.5);
 }
 
+.modal-wide {
+    max-width: unset;
+}
+
 .modal-dialog.modal-wide {
     width: auto;
     margin: 30px;
