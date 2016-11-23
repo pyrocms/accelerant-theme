@@ -1,0 +1,10 @@
+.btn {
+    &.btn-xs {
+        font-size: $font-size-sm;
+        padding: $spacer-x/2 $spacer-y/2;
+    }
+}
+
+.btn-outline-white {
+    @include button-outline-variant(#ffffff);
+}

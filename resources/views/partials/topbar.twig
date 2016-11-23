@@ -1,12 +1,10 @@
 <section id="topbar">
 
     <div class="topbar-left">
-        <div class="text-center">
-            <a href="/admin" class="logo">
-                {{ img('theme::img/icon-black.svg').data|raw }}
-                <span>Pyro <small>{{ config('streams::distribution.version') }}</small></span>
-            </a>
-        </div>
+        <a href="/admin" class="logo">
+            {{ img('theme::img/icon-black.svg').data|raw }}
+            <span>Pyro <small>{{ config('streams::distribution.version') }}</small></span>
+        </a>
     </div>
 
     <div class="navbar navbar-default" role="navigation">
@@ -26,16 +24,15 @@
                 <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
             </form>
 
-            <ul class="nav navbar-nav navbar-right pull-right">
-                <li class="dropdown hidden-xs">
+            <ul class="nav navbar-nav navbar-left pull-right">
+                <li class="nav-item dropdown hidden-xs">
 
-                    <a href="#" data-target="#" class="dropdown-toggle"
-                       data-toggle="dropdown" aria-expanded="true">
-                        <span class="label label-xs label-danger">3</span>
+                    <a href="#" data-target="#" data-toggle="dropdown">
+                        <span class="tag tag-xs tag-danger">3</span>
                     </a>
 
-                    <ul class="dropdown-menu dropdown-menu-lg">
-                        <li class="text-center notification-title">Notification</li>
+                    <ul class="dropdown-menu-right dropdown-menu dropdown-menu-lg">
+                        <li class="notification-title">Notification</li>
 
                         <li class="list-group">
 
@@ -89,11 +86,11 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown">
-                        <img src="{{ user().gravatar }}" width="36" class="img-circle">
+                <li class="nav-item dropdown">
+                    <a href="javascript:void(0);" data-toggle="dropdown">
+                        <img src="{{ user().gravatar }}" width="36" class="rounded-circle">
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu-right dropdown-menu">
                         <li><a href="/" target="_blank"><i class="fa fa-external-link"></i> View Website</a></li>
                         <li><a href="/admin/logout"><i class="fa fa-power-off"></i> Logout</a></li>
                     </ul>

@@ -1,0 +1,27 @@
+@mixin button-outline-variant($color) {
+
+    color: $color;
+    border-color: $color;
+    background: transparent;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $color;
+        border-color: $color;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            border-color: $color;
+            background-color: $color;
+        }
+    }
+}

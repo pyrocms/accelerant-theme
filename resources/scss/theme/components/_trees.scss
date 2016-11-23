@@ -1,0 +1,120 @@
+//
+// Tree UI
+// --------------------------------------------------
+
+ul.tree {
+    padding-left: 0;
+    list-style: none;
+
+    ul, ol {
+        list-style: none;
+    }
+
+    li {
+        .card {
+            padding-right: 4px;
+            margin-bottom: 9px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            border: 2px solid transparent;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03);
+
+            .handle {
+                cursor: move;
+                line-height: 1;
+                padding: 6px 9px;
+                border-radius: 2px;
+                background: $gray-lighter;
+                color: rgba(0, 0, 0, 0.2);
+            }
+
+            .buttons {
+                float: right;
+                display: none;
+            }
+
+            > span {
+                margin-left: 6px;
+            }
+
+            &:hover {
+                > .buttons {
+                    display: block;
+                }
+            }
+        }
+
+        &.dragged {
+            opacity: 0.5;
+            position: absolute;
+            margin-bottom: $line-height-base;
+        }
+
+        &.placeholder {
+            height: 30px;
+            margin-bottom: 9px;
+            border: 2px dashed $gray-light;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    ul.tree {
+        li {
+            .card {
+                .buttons {
+                    display: block;
+                    a {
+                        font-size: 0;
+                        .fa {
+                            font-size: 18px !important;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    ul.tree {
+        li {
+            .card {
+                .buttons {
+                    display: block;
+                    border-left: 1em solid transparent;
+                    border-right: 1em solid transparent;
+                    border-top: 1em solid #38b5e6;
+                    margin-top: .275em;
+
+                    a {
+                        display: none;
+                        .fa {
+                            font-size: 18px !important;
+                        }
+                    }
+
+                    &:hover, &:focus {
+                        position: fixed;
+                        bottom: 0;
+                        background-color: #3e3e3e !important;
+                        border: none;
+                        display: block;
+                        width: 100%;
+                        z-index: 500;
+                        padding-top: .75em;
+                        padding-left: 0.75em;
+                        padding-right: 0.75em;
+                        padding-bottom: 0.75em;
+                        margin-left: -1.1em;
+                        a {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -11,10 +11,10 @@
 {#<link rel="shortcut icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}">#}
 {#<link rel="apple-touch-icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}"/>#}
 
-{#{{ asset_add("theme.css", "theme::less/flat-ui/flat-ui.less") }}#}
-{{ asset_add("theme.css", "theme::less/fonts/fonts.less", ["parse"]) }}
-{{ asset_add("theme.css", "theme::less/bootstrap/bootstrap.less") }}
-{{ asset_add("build.css", "theme::less/theme/theme.less") }}
+{#{{ asset_add("theme.css", "theme::scss/flat-ui/flat-ui.scss") }}#}
+{{ asset_add("theme.css", "theme::scss/fonts/fonts.scss", ["parse"]) }}
+{{ asset_add("theme.css", "theme::scss/bootstrap/bootstrap.scss") }}
+{{ asset_add("build.css", "theme::scss/theme/theme.scss") }}
 
 {{ asset_add("theme.js", "theme::js/vendor/*") }}
 {{ asset_add("theme.js", "theme::js/libraries/tether.min.js") }}
