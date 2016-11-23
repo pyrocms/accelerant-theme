@@ -22,9 +22,10 @@ ul.tree {
             .handle {
                 cursor: move;
                 padding: 6px 9px;
+                box-shadow: none;
                 background: $gray-lighter;
                 color: rgba(0, 0, 0, 0.2);
-                @include border-radius($border-radius);
+                @include border-radius($border-radius-sm);
             }
 
             .buttons {
