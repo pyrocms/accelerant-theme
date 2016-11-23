@@ -150,7 +150,7 @@ $container-max-widths: (
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:               12 !default;
+$grid-columns:               24 !default;
 $grid-gutter-width-base:     30px !default;
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base,
@@ -236,9 +236,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .3rem !default;
-$border-radius-sm:       .2rem !default;
+$border-radius:          .17rem !default;
+$border-radius-lg:       .25rem !default;
+$border-radius-sm:       .1rem !default;
 
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
@@ -310,8 +310,8 @@ $btn-block-spacing-y:            .5rem !default;
 $btn-toolbar-margin:             .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:              $border-radius !default;
-$btn-border-radius-lg:           $border-radius-lg !default;
+$btn-border-radius:              $border-radius-sm !default;
+$btn-border-radius-lg:           $border-radius-sm !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
 
 
@@ -605,8 +605,8 @@ $state-danger-border:            darken($state-danger-bg, 5%) !default;
 // Cards
 $card-spacer-x:            1.25rem !default;
 $card-spacer-y:            .75rem !default;
-$card-border-width:        1px !default;
-$card-border-radius:       $border-radius !default;
+$card-border-width:        0 !default;
+$card-border-radius:       $border-radius-sm !default;
 $card-border-color:        rgba(0,0,0,.125) !default;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:              #f5f5f5 !default;

@@ -1,0 +1,88 @@
+.form {
+
+    .field-group {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $gray-lighter;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 0;
+
+        &.has-info {
+            .c-checkbox,
+            .c-radio {
+                color: $brand-info;
+            }
+        }
+
+        &.has-danger {
+            .c-checkbox,
+            .c-radio {
+                color: $brand-danger;
+            }
+        }
+
+        &.has-success {
+            .c-checkbox,
+            .c-radio {
+                color: $brand-success;
+            }
+        }
+
+        &.has-warning {
+            .c-checkbox,
+            .c-radio {
+                color: $brand-warning;
+            }
+        }
+    }
+
+    .controls {
+        &.top {
+            &.affix {
+                top: 0;
+                left: 0;
+                right: 0;
+                position: fixed;
+                z-index: $zindex-modal - 100;
+                border-width: 0 0 1px 0;
+                padding: 0 ($grid-gutter-width-base / 2);
+                @include border-radius($border-radius);
+
+                + div {
+                    margin-top: 92px;
+                }
+            }
+        }
+
+        .actions {
+            display: inline-block;
+        }
+
+        .buttons {
+            float: right;
+        }
+    }
+
+    label {
+
+        &.control-label {
+            font-weight: bold;
+        }
+
+        .required {
+            color: $brand-danger;
+        }
+    }
+}
+
+.form-control {
+    @include border-radius($border-radius);
+}

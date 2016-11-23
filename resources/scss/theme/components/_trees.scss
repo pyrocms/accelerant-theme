@@ -13,19 +13,18 @@ ul.tree {
     li {
         .card {
             padding-right: 4px;
-            margin-bottom: 9px;
-            border-radius: 3px;
+            margin-bottom: 7px;
             background-color: #ffffff;
             border: 2px solid transparent;
-            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03);
+            @include border-radius($border-radius);
+            @include shadow();
 
             .handle {
                 cursor: move;
-                line-height: 1;
                 padding: 6px 9px;
-                border-radius: 2px;
                 background: $gray-lighter;
                 color: rgba(0, 0, 0, 0.2);
+                @include border-radius($border-radius);
             }
 
             .buttons {
@@ -54,7 +53,39 @@ ul.tree {
             height: 30px;
             margin-bottom: 9px;
             border: 2px dashed $gray-light;
-            border-radius: $border-radius;
+            @include border-radius($border-radius);
+        }
+
+        &.collapsed {
+            > .card {
+                position: relative;
+
+                > .handle {
+                    color: #ffffff;
+                    background: $brand-info;
+                }
+
+                > .count {
+                    top: -7px;
+                    left: -7px;
+                    width: 14px;
+                    height: 14px;
+                    color: #ffffff;
+                    font-size: 10px;
+                    cursor: default;
+                    font-weight: bold;
+                    line-height: 14px;
+                    text-align: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    background: $brand-danger;
+                    @include shadow();
+                }
+            }
+
+            > ul {
+                display: none;
+            }
         }
     }
 }

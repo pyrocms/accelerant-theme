@@ -14,13 +14,18 @@
 @import "layout/sidebar";
 
 // Components
+@import "components/cards";
+@import "components/forms";
 @import "components/trees";
 @import "components/tables";
 @import "components/modals";
 @import "components/loader";
 @import "components/buttons";
+@import "components/variants";
 @import "components/breadcrumb";
 @import "components/scaffolding";
+@import "components/input-group";
+@import "components/custom-forms";
 
 // Pages
 @import "pages/login";
