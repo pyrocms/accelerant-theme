@@ -1,0 +1,49 @@
+.nav {
+    &.nav-sections {
+        margin-bottom: 1em;
+        border-bottom: 1px solid $card-border-color;
+
+        li {
+            text-align: center;
+            display: inline-block;
+
+            a {
+                color: $gray;
+                display: block;
+                padding: 0.5em 2em;
+                border-right: 1px solid $card-border-color;
+
+                &:hover {
+                    background: $gray-lighter;
+                }
+            }
+
+            &.active {
+                a {
+                    color: #ffffff;
+                    background: $brand-info;
+                }
+            }
+        }
+    }
+
+    &.nav-pills {
+        .nav-item {
+            .nav-link {
+                color: $body-color;
+
+                &:hover {
+                    background: $gray-lighter;
+                }
+
+                small {
+                    color: $gray-light;
+                }
+            }
+        }
+    }
+}
+
+.tab-pane:not(.active) {
+    display: none;
+}

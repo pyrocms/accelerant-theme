@@ -691,13 +691,13 @@ $modal-title-padding:         15px !default;
 $modal-title-line-height:     $line-height-base !default;
 
 $modal-content-bg:               #fff !default;
-$modal-content-border-color:     rgba(0,0,0,.2) !default;
-$modal-content-border-width:     $border-width !default;
+$modal-content-border-color:     transparent !default;
+$modal-content-border-width:     0 !default;
 $modal-content-xs-box-shadow:    0 3px 9px rgba(0,0,0,.5) !default;
 $modal-content-sm-up-box-shadow: 0 5px 15px rgba(0,0,0,.5) !default;
 
-$modal-backdrop-bg:           #000 !default;
-$modal-backdrop-opacity:      .5 !default;
+$modal-backdrop-bg:           #212121 !default;
+$modal-backdrop-opacity:      .8 !default;
 $modal-header-border-color:   #e5e5e5 !default;
 $modal-footer-border-color:   $modal-header-border-color !default;
 $modal-header-border-width:   $modal-content-border-width !default;
@@ -798,7 +798,7 @@ $breadcrumb-item-padding:       .5rem !default;
 
 $breadcrumb-bg:                 $gray-lighter !default;
 $breadcrumb-divider-color:      $gray-light !default;
-$breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-active-color:       lighten($gray-light, 20%) !default;
 $breadcrumb-divider:            "/" !default;
 
 

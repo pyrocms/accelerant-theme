@@ -11,6 +11,7 @@ body.modal-open {
 
     .modal-content {
         min-height: 100px;
+        @include border-radius($border-radius-sm);
     }
 }
 
