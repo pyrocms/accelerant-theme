@@ -9,6 +9,10 @@ body.modal-open {
         transition: transform .3s ease-out;
     }
 
+    .close {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
     .modal-content {
         min-height: 100px;
         @include border-radius($border-radius-sm);

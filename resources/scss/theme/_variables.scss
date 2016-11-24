@@ -44,7 +44,7 @@
 
 $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
-$gray-light:                #818a91 !default;
+$gray-light:                #888888 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
@@ -53,7 +53,7 @@ $brand-success:             #47d165 !default;
 $brand-info:                #11bef6 !default;
 $brand-warning:             #ff754b !default;
 $brand-danger:              #ff3160 !default;
-$brand-inverse:             $gray-dark !default;
+$brand-inverse:             $gray-light !default;
 
 
 // Options
@@ -112,10 +112,10 @@ $body-color: $gray-dark !default;
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            $gray-dark !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 // Grid breakpoints

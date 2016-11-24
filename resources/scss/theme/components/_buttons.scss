@@ -1,13 +1,17 @@
 .btn {
 
-    &:not(.btn-default):not(.btn-link) {
-        @include shadow();
-    }
-
     &.btn-xs {
         font-size: $font-size-xs;
         padding: $spacer-x/3 $spacer-y/2;
     }
+}
+
+.btn-default {
+    @include button-variant(#ffffff, $brand-inverse, $brand-inverse);
+}
+
+.btn-inverse {
+    @include button-variant(#ffffff, $brand-inverse, $brand-inverse);
 }
 
 .btn-white-outline {
