@@ -45,22 +45,6 @@
     }
 
     .controls {
-        &.top {
-            &.affix {
-                top: 0;
-                left: 0;
-                right: 0;
-                position: fixed;
-                z-index: $zindex-modal - 100;
-                border-width: 0 0 1px 0;
-                padding: 0 ($grid-gutter-width-base / 2);
-                @include border-radius($border-radius);
-
-                + div {
-                    margin-top: 92px;
-                }
-            }
-        }
 
         .actions {
             display: inline-block;
