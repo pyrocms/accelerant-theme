@@ -7,11 +7,11 @@
 }
 
 .btn-default {
-    @include button-variant(#ffffff, $brand-inverse, $brand-inverse);
+    @include button-variant(#ffffff !important, $brand-inverse, $brand-inverse);
 }
 
 .btn-inverse {
-    @include button-variant(#ffffff, $brand-inverse, $brand-inverse);
+    @include button-variant(#ffffff !important, $brand-inverse, $brand-inverse);
 }
 
 .btn-white-outline {
