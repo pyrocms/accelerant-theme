@@ -531,10 +531,10 @@ $nav-disabled-link-color:       $gray-light !default;
 $nav-disabled-link-hover-color: $gray-light !default;
 $nav-disabled-link-hover-bg:    transparent !default;
 
-$nav-tabs-border-color:                       #ddd !default;
-$nav-tabs-border-width:                       $border-width !default;
+$nav-tabs-border-color:                       transparent !default;
+$nav-tabs-border-width:                       0 !default;
 $nav-tabs-border-radius:                      $border-radius !default;
-$nav-tabs-link-hover-border-color:            $gray-lighter !default;
+$nav-tabs-link-hover-border-color:            transparent !default;
 $nav-tabs-active-link-hover-color:            $gray !default;
 $nav-tabs-active-link-hover-bg:               $body-bg !default;
 $nav-tabs-active-link-hover-border-color:     #ddd !default;
@@ -625,7 +625,7 @@ $card-columns-sm-up-column-gap: 1.25rem !default;
 
 $tooltip-max-width:           200px !default;
 $tooltip-color:               #fff !default;
-$tooltip-bg:                  #000 !default;
+$tooltip-bg:                  #212121 !default;
 $tooltip-opacity:             .9 !default;
 $tooltip-padding-y:           3px !default;
 $tooltip-padding-x:           8px !default;

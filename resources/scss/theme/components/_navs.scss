@@ -1,7 +1,7 @@
 .nav {
     &.nav-sections {
         margin-bottom: 1em;
-        border-bottom: 1px solid $card-border-color;
+        background-color: #eceeef;
 
         li {
             text-align: center;
@@ -11,17 +11,12 @@
                 color: $gray;
                 display: block;
                 padding: 0.5em 2em;
-                border-right: 1px solid $card-border-color;
-
-                &:hover {
-                    background: $gray-lighter;
-                }
             }
 
             &.active {
                 a {
-                    color: #ffffff;
-                    background: $brand-info;
+                    color: $gray;
+                    background: #ffffff;
                 }
             }
         }
