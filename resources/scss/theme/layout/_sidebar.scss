@@ -9,6 +9,11 @@
     overflow-x: scroll;
     background: #252525;
     padding-bottom: 70px;
+    -webkit-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     > ul {
         padding: 0;
