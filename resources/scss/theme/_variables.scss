@@ -179,11 +179,11 @@ $font-size-xs:   .75rem !default;
 
 $line-height-base: 1.5 !default;
 
-$font-size-h1: 2.5rem !default;
-$font-size-h2: 2rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
+$font-size-h1: 2rem !default;
+$font-size-h2: 1.75rem !default;
+$font-size-h3: 1.5rem !default;
+$font-size-h4: 1.3rem !default;
+$font-size-h5: 1.1rem !default;
 $font-size-h6: 1rem !default;
 
 $display1-size: 6rem !default;
@@ -241,7 +241,7 @@ $border-radius-lg:       .25rem !default;
 $border-radius-sm:       .1rem !default;
 
 $component-active-color: #fff !default;
-$component-active-bg:    $brand-primary !default;
+$component-active-bg:    $brand-info !default;
 
 $caret-width:            .3em !default;
 $caret-width-lg:         $caret-width !default;
@@ -334,7 +334,7 @@ $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
 $input-bg-focus:                 $input-bg !default;
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             $brand-info !default;
 $input-box-shadow-focus:         $input-box-shadow, 0 0 8px rgba(102,175,233,.6) !default;
 $input-color-focus:              $input-color !default;
 
@@ -460,12 +460,12 @@ $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 $dropdown-box-shadow:            0 .5rem 1rem rgba(0,0,0,.175) !default;
 
-$dropdown-link-color:            $gray-dark !default;
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+$dropdown-link-color:            $gray !default;
+$dropdown-link-hover-color:      darken($gray, 5%) !default;
 $dropdown-link-hover-bg:         #f5f5f5 !default;
 
-$dropdown-link-active-color:     $component-active-color !default;
-$dropdown-link-active-bg:        $component-active-bg !default;
+$dropdown-link-active-color:     #212121 !default;
+$dropdown-link-active-bg:        #f5f5f5 !default;
 
 $dropdown-link-disabled-color:   $gray-light !default;
 
@@ -543,7 +543,7 @@ $nav-tabs-justified-active-link-border-color: $body-bg !default;
 
 $nav-pills-border-radius:     $border-radius !default;
 $nav-pills-active-link-color: $component-active-color !default;
-$nav-pills-active-link-bg:    $component-active-bg !default;
+$nav-pills-active-link-bg:    $gray-lighter !default;
 
 
 // Pagination
