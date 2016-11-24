@@ -1,0 +1,62 @@
+#footer {
+    padding: 1em 3em;
+    overflow: hidden;
+    margin-left: 240px;
+    background: #ffffff;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+
+        &.pull-right {
+            margin-top: -0.35em;
+        }
+
+        li {
+            color: darken($gray-lighter, 20%);
+            display: inline-block;
+            font-size: $font-size-sm;
+
+            &:not(:last-child) {
+                margin-right: 0.75em;
+            }
+
+            &.logo {
+                margin-right: 1em;
+
+                img {
+                    height: 2em;
+                    margin-top: -0.5em;
+                    display: inline-block;
+                }
+            }
+
+            &.footprint {
+                span {
+                    color: darken($gray-lighter, 15%);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #footer {
+        padding: 1.25em;
+
+        ul {
+            margin-bottom: 1em;
+        }
+
+        select {
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            margin-bottom: 1em;
+        }
+    }
+}
+
