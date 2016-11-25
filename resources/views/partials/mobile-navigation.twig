@@ -1,0 +1,31 @@
+{#
+
+Mobile menu wrapper. Let's place nav items here.
+How do we solve the second navigation on mobile? Two suggestions:
+1) We slide it over / push it over this one.
+2) We use Collapse.
+
+#}
+<div off-canvas="mnav left push" id="mobile-navigation">
+    <button type="button" class="toggle-mnav float-xs-right hidden-md-up">
+           test toggle
+    </button>
+</div>
+
+
+{# INIT #}
+<script>
+    ( function ( $ ) {
+
+        var controller = new slidebars();
+        controller.init();
+
+        $( '.toggle-mnav' ).on( 'click', function ( event ) {
+          event.stopPropagation();
+          event.preventDefault();
+          controller.toggle( 'mnav' );
+        } );
+
+
+    } ) ( jQuery );
+</script>

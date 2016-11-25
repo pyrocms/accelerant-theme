@@ -14,30 +14,38 @@
 {#{% include "theme::partials/brand" %}#}
 {#{% include "theme::partials/navbar" %}#}
 {#{% include "theme::partials/header" %}#}
+<div canvas="container">
 
-<section id="app">
+    <section id="app">
 
-    {% include "theme::partials/topbar" %}
-    {% include "theme::partials/sidebar" %}
-    {% include "theme::partials/menu" %}
+        {% include "theme::partials/topbar" %}
+        {% include "theme::partials/sidebar" %}
+        {% include "theme::partials/menu" %}
 
-    <main id="main">
+        <main id="main">
 
-        {{ breadcrumb() }}
+            {{ breadcrumb() }}
 
-        <div class="container-fluid">
-            {% include "theme::partials/messages" %}
-            {% include "theme::partials/buttons" %}
-        </div>
+            <div class="container-fluid">
+                {% include "theme::partials/messages" %}
+                {% include "theme::partials/buttons" %}
+            </div>
 
-        {% block content %}{% endblock %}
+            {% block content %}{% endblock %}
 
-    </main>
-</section>
+        </main>
 
-{% include "theme::partials/footer" %}
+    </section>
+
+    {% include "theme::partials/footer" %}
+
+</div>
+
 {% include "theme::partials/modals" %}
 {% include "theme::partials/js" %}
+
+{# Mobile navigation wrapper as well as script to init slidebars #}
+{% include "theme::partials/mobile-navigation" %}
 
 </body>
 </html>

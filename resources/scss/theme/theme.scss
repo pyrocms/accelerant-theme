@@ -3,6 +3,9 @@
 // Bootstrap base styles
 @import "../bootstrap/bootstrap";
 
+// Vendors
+@import "../vendor/slidebars.scss";
+
 // Utilities
 @import "_mixins";
 @import "_variables";
@@ -14,6 +17,7 @@
 @import "layout/topbar";
 @import "layout/buttons";
 @import "layout/sidebar";
+@import "layout/mobile-navigation";
 
 // Components
 @import "components/tags";

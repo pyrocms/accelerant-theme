@@ -1,3 +1,4 @@
+
 #topbar {
     top: 0;
     left: 0;
@@ -113,7 +114,7 @@
                         border: none;
                         border-radius: 0;
                         padding: 10px 20px;
-                        
+
                         &:last-child {
                             text-align: center;
                         }
@@ -144,3 +145,43 @@ body.expand {
         }
     }
 }
+
+
+// -----------------------------------------------------------------
+// Styling of the mobile top bar.
+// Currently we have set topbar.twig to display it if the screen
+// width is below 768px.
+// -----------------------------------------------------------------
+@include media-breakpoint-down(md) {
+
+	// Topbar mobile wrapper.
+	.topbar__mobile
+	{
+		display:flex;
+		height:70px;
+		align-items:center;
+	}
+
+	// Flex columns inside, equal spacing right now.
+	.topbar__mobile-column
+	{
+		flex:1;
+	}
+
+	// Custom styling for the logo with the mobile topbar.
+	#topbar .topbar__mobile-logo
+	{
+		display:flex;
+		width:75px;
+		line-height: 1;
+		align-items:center;
+
+		svg
+		{
+			width:100%;
+			height:100%;
+		}
+	}
+
+}
+
