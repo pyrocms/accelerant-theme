@@ -1,7 +1,18 @@
-.breadcrumb {
-    font-size: .8rem;
 
-    a {
+.breadcrumb
+{
+    border-radius: 0;
+	background:$gray-alpha;
+	border-bottom:1px solid $gray-beta;
+	padding-bottom: calc(0.75rem - 1px);
+    a
+    {
         color: $gray-light;
     }
 }
+
+.breadcrumb-item.active
+{
+	color:$gray-dark;
+}
+
