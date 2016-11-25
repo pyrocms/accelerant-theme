@@ -10,8 +10,8 @@
         list-style: none;
         display: inline-block;
 
-        &.pull-right {
-            margin-top: -0.35em;
+        &:first-of-type {
+            margin-top: 8px;
         }
 
         li {
