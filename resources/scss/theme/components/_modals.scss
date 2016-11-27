@@ -16,7 +16,7 @@ body.modal-open {
     }
 
     .modal-content {
-        min-height: 130px;
+        min-height: 100px;
         @include border-radius($border-radius-sm);
     }
 }
@@ -31,7 +31,7 @@ body.modal-open {
     background: rgba(255, 255, 255, 0.5);
 
     .loader {
-        margin-bottom: -1rem;
+        margin-top: .7rem;
     }
 }
 
