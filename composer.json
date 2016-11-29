@@ -1,5 +1,5 @@
 {
-    "name": "pyro/accelerant-theme",
+    "name": "pyrocms/accelerant-theme",
     "type": "streams-addon",
     "autoload": {
         "psr-4": {
