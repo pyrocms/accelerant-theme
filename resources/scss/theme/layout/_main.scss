@@ -3,3 +3,18 @@
     padding-top: 70px;
     margin-left: 240px;
 }
+
+
+@include media-breakpoint-down(sm) {
+
+
+    #main
+    {
+		margin-left:70px;
+    }
+    body.expand #main
+    {
+
+    }
+
+}

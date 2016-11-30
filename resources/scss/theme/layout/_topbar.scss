@@ -113,7 +113,7 @@
                         border: none;
                         border-radius: 0;
                         padding: 10px 20px;
-                        
+
                         &:last-child {
                             text-align: center;
                         }
@@ -144,3 +144,18 @@ body.expand {
         }
     }
 }
+
+
+@include media-breakpoint-down(sm) {
+
+    #wall
+    {
+
+    }
+    body.expand #wall
+    {
+    	display:none;
+    }
+
+}
+

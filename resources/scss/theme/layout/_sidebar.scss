@@ -71,3 +71,23 @@ body.expand {
         }
     }
 }
+
+
+
+@include media-breakpoint-down(sm) {
+
+
+    #sidebar
+    {
+		width:70px;
+		transition: all 0ms ease-in-out;
+    }
+    body.expand #sidebar
+    {
+		width:50vw !important;
+    }
+
+}
+
+
+

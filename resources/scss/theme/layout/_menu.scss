@@ -68,3 +68,18 @@ body.compact {
         }
     }
 }
+
+@include media-breakpoint-down(sm) {
+
+
+    #menu
+    {
+		width:0px;
+    }
+    body.expand #menu
+    {
+		width:50vw !important;
+		left:50vw;
+    }
+
+}
