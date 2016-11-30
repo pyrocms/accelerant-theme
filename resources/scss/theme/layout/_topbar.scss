@@ -153,7 +153,10 @@ body.expand {
 // width is below 768px.
 // -----------------------------------------------------------------
 @include media-breakpoint-down(md) {
-
+	#topbar
+	{
+		position: absolute;
+	}
 	// Topbar mobile wrapper.
 	.topbar__mobile
 	{

@@ -6,10 +6,40 @@ How do we solve the second navigation on mobile? Two suggestions:
 2) We use Collapse.
 
 #}
-<div off-canvas="mnav left push" id="mobile-navigation">
-    <button type="button" class="toggle-mnav float-xs-right hidden-md-up">
-           test toggle
-    </button>
+<div off-canvas="mnav left push" id="mobile-navigation" class="Mnav">
+    <div class="row">
+        <div class="col-xs-24">
+           <button type="button" class="toggle-mnav float-xs-right hidden-md-up">
+            test toggle
+        </button>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 Mnav__Column">
+        <ul class="Mnav__List Mnav__List--Alpha">
+            {% for module in addons().modules().navigation() %}
+                <li class="{{ module.active ? 'active' }} variant-border">
+                    <a href="{{ url_to('admin/' ~ module.slug) }}">
+                        {{ trans(module.title) }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-xs-12 Mnav__Column">
+        <ul class="Mnav__List Mnav__List--Beta">
+            {% for section in template.cp.sections.root() %}
+                <li class="{{ section.highlighted ? 'active' }} {{ section.class }}">
+                    <a {{ html_attributes(section.attributes) }}>
+                       {{ trans(section.title)|raw }}
+                   </a>
+               </li>
+           {% endfor %}
+       </ul>
+   </div>
+</div>
 </div>
 
 
@@ -21,11 +51,10 @@ How do we solve the second navigation on mobile? Two suggestions:
         controller.init();
 
         $( '.toggle-mnav' ).on( 'click', function ( event ) {
-          event.stopPropagation();
-          event.preventDefault();
-          controller.toggle( 'mnav' );
+            event.stopPropagation();
+            event.preventDefault();
+            controller.toggle( 'mnav' );
         } );
-
 
     } ) ( jQuery );
 </script>

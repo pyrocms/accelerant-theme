@@ -45,6 +45,7 @@
 @include media-breakpoint-down(sm) {
     #footer {
         padding: 1.25em;
+        margin-left:0;
 
         ul {
             margin-bottom: 1em;
