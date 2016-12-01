@@ -31,7 +31,7 @@
 
 .ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
     background-color: #999999;
-    height: 11px;
+    height: 8px;
 }
 
 .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
@@ -41,7 +41,7 @@
 
 .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     background-color: #999999;
-    width: 11px;
+    width: 8px;
 }
 
 .ps-container > .ps-scrollbar-x-rail {
@@ -55,7 +55,7 @@
     transition: background-color .2s linear, opacity .2s linear;
     bottom: 0px;
     /* there must be 'bottom' for ps-scrollbar-x-rail */
-    height: 15px;
+    height: 10px;
 }
 
 .ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
@@ -77,7 +77,7 @@
 }
 
 .ps-container > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x, .ps-container > .ps-scrollbar-x-rail:active > .ps-scrollbar-x {
-    height: 11px;
+    height: 8px;
 }
 
 .ps-container > .ps-scrollbar-y-rail {
@@ -91,7 +91,7 @@
     transition: background-color .2s linear, opacity .2s linear;
     right: 0;
     /* there must be 'right' for ps-scrollbar-y-rail */
-    width: 15px;
+    width: 10px;
 }
 
 .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
@@ -107,13 +107,13 @@
     -moz-transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;
     transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;
     transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;
-    right: 2px;
+    right: 1px;
     /* there must be 'right' for ps-scrollbar-y */
-    width: 6px;
+    width: 3px;
 }
 
 .ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
-    width: 11px;
+    width: 8px;
 }
 
 .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
@@ -123,7 +123,7 @@
 
 .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
     background-color: #999999;
-    height: 11px;
+    height: 8px;
 }
 
 .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
@@ -133,7 +133,7 @@
 
 .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     background-color: #999999;
-    width: 11px;
+    width: 8px;
 }
 
 .ps-container:hover > .ps-scrollbar-x-rail,
