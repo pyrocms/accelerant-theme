@@ -3,3 +3,9 @@
     padding-top: 70px;
     margin-left: 240px;
 }
+
+@include media-breakpoint-down(md) {
+    #main {
+        margin-left: 0;
+    }
+}

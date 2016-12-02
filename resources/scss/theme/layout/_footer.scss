@@ -42,21 +42,39 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     #footer {
-        padding: 1.25em;
+        margin-left: 0;
 
         ul {
-            margin-bottom: 1em;
-        }
+            display: block;
 
-        select {
-            margin-bottom: 1em;
-        }
+            &.pull-right {
+                margin-top: $spacer-y;
+                float: none !important;
 
-        .btn {
-            margin-bottom: 1em;
+                li {
+                    margin: 0;
+                    width: 100%;
+                }
+            }
         }
     }
 }
 
+@include media-breakpoint-down(md) {
+    #footer {
+        ul {
+            li {
+                width: 100%;
+                margin-top: $spacer-y/2 !important;
+
+                select,
+                .btn {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}

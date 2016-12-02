@@ -48,23 +48,24 @@
     }
 }
 
-body.compact {
-    #sidebar {
-        width: 70px !important;
+@include media-breakpoint-down(md) {
+    #menu {
+        width: 0;
+    }
 
-        a {
-            text-align: center;
+    body.expand {
+        #menu {
+            left: 240px !important;
+            width: 240px !important;
+        }
+    }
+}
 
-            span {
-                display: none;
-            }
-
-            &:hover {
-                span {
-                    // The hover tooltips
-                    //display: block;
-                }
-            }
+@include media-breakpoint-down(sm) {
+    body.expand {
+        #menu {
+            left: 50% !important;
+            width: 50% !important;
         }
     }
 }
