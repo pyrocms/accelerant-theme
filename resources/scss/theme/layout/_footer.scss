@@ -54,26 +54,25 @@
                 float: none !important;
 
                 li {
-                    margin: 0;
                     width: 100%;
+                    margin-top: $spacer-y/2 !important;
+
+                    select,
+                    .btn {
+                        width: 100%;
+                        display: block;
+                    }
                 }
             }
         }
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
     #footer {
         ul {
             li {
                 width: 100%;
-                margin-top: $spacer-y/2 !important;
-
-                select,
-                .btn {
-                    width: 100%;
-                    display: block;
-                }
             }
         }
     }

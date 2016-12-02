@@ -19,21 +19,6 @@
         position: absolute;
         background: #1f1f1f;
         transition: left 300ms 500ms;
-
-        .logo {
-            color: #ffffff;
-            font-size: 4rem;
-            margin-top: 40vh;
-            font-weight: bold;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-
-            span {
-                font-size: 1rem;
-                font-weight: normal;
-                color: rgba(255, 255, 255, 0.2);
-            }
-        }
     }
 
     .login-container {
@@ -47,6 +32,21 @@
         -moz-animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
         animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
         background-size: 200% 200%;
+
+        .logo {
+            display: none;
+
+            svg {
+                width: 75px;
+                height: auto;
+                margin-top: -30px;
+                vertical-align: middle;
+
+                .st0 {
+                    fill: #ffffff;
+                }
+            }
+        }
 
         @-webkit-keyframes LoginBackground {
             0% {
@@ -94,6 +94,92 @@
             label {
                 color: #ffffff;
                 margin-top: .35rem;
+            }
+        }
+    }
+
+    .logo {
+        color: #ffffff;
+        font-size: 4rem;
+        margin-top: 40vh;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+
+        svg {
+            width: 75px;
+            height: auto;
+            margin-top: -30px;
+            vertical-align: middle;
+
+            .st0 {
+                fill: #ffffff;
+            }
+        }
+
+        span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #login {
+
+        &.success {
+            .logo-container {
+                left: -100%;
+            }
+
+            .login-container {
+                right: 100%;
+            }
+        }
+
+        .logo-container {
+            width: 100%;
+
+            .logo {
+                display: none;
+            }
+        }
+
+        .login-container {
+            width: 100%;
+            background: none !important;
+
+            .login-wrapper {
+                margin-top: 20vh;
+            }
+
+            .logo {
+                margin-top: 0;
+                line-height: 1;
+                display: inherit;
+                margin-bottom: 2rem;
+
+                svg {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #login {
+
+        .login-container {
+
+            .login-wrapper {
+                margin-top: 20vh;
+                padding: 0 3rem;
+            }
+
+            .logo {
+                margin-bottom: 4rem;
             }
         }
     }

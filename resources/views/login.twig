@@ -4,14 +4,21 @@
 
     <div class="logo-container">
         <div class="logo">
+            {{ img('theme::img/icon-canvas.svg').data|raw }}
             PYRO
-            <span>{{ config('streams::distribution.version') }}</span></div>
+            <span>{{ config('streams::distribution.version') }}</span>
+        </div>
         <div class="overlay"></div>
     </div>
 
     <div class="login-container variant-background">
         <div class="login-wrapper container-fluid">
-            <div class="col-lg-12 offset-lg-6">
+
+            <div class="logo">
+                {{ img('theme::img/icon-canvas.svg').data|raw }}
+            </div>
+
+            <div class="col-sm-12 offset-sm-6">
 
                 {% set form = form('login').redirect('admin').get() %}
 
