@@ -70,3 +70,23 @@
 .form-control {
     @include border-radius($border-radius);
 }
+
+@include media-breakpoint-down(sm) {
+    .form {
+        .controls {
+
+            .actions,
+            .buttons {
+                float: none;
+                display: block;
+            }
+
+            .btn,
+            .btn-group {
+                width: 100%;
+                display: block;
+                margin-top: $spacer-y/2;
+            }
+        }
+    }
+}
