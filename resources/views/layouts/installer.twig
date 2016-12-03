@@ -26,7 +26,9 @@
 <main id="main">
     <div class="container">
 
-        {% include "theme::partials/messages" %}
+        <div class="container-fluid">
+            {% include "theme::partials/messages" %}
+        </div>
 
         {% block content %}{% endblock %}
 
