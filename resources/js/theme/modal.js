@@ -1,18 +1,26 @@
 var initModal = function () {
+
     var modal = $('.modal');
     var remote = $('.modal.remote');
+
+    var loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
+
+    // Loading state
+    modal.on('loading', function() {
+        $(this).find('.modal-content').append(loading);
+    });
 
     // Clear remote modals when closed.
     remote.on('hidden.bs.modal', function () {
 
         $(this).removeData('bs.modal');
 
-        $(this).find('.modal-content').html('<div class="modal-loading"><div class="active loader"></div></div>');
+        $(this).find('.modal-content').html(loading);
     });
 
     // Show loader for remote modals.
     remote.on('show.bs.modal', function () {
-        $(this).find('.modal-content').html('<div class="modal-loading"><div class="active loader"></div></div>');
+        $(this).find('.modal-content').html(loading);
     });
 
     // Handle ajax links in modals.
@@ -22,7 +30,7 @@ var initModal = function () {
 
         var wrapper = $(this).closest('.modal-content');
 
-        wrapper.append('<div class="modal-loading"><div class="active loader"></div></div>');
+        wrapper.append(loading);
 
         $.get($(this).attr('href'), function (html) {
             wrapper.html(html);
@@ -36,7 +44,7 @@ var initModal = function () {
 
         var wrapper = $(this).closest('.modal-content');
 
-        wrapper.append('<div class="modal-loading"><div class="active loader"></div></div>');
+        wrapper.append(loading);
 
         if ($(this).attr('method') == 'GET') {
             $.get($(this).attr('action'), $(this).serializeArray(), function (html) {
