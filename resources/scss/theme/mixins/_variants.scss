@@ -16,4 +16,8 @@
     .variant-#{$index} .variant-background, .variant-#{$index}-background {
         background: $gradient !important;
     }
+
+    .variant-#{$index} .variant-background-pattern, .variant-#{$index}-background-pattern {
+        background-image: url('{{ image_path("theme::img/bg.svg") }}'), $gradient !important;
+    }
 }

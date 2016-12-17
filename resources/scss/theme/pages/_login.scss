@@ -28,10 +28,9 @@
         position: absolute;
         transition: right 300ms 500ms;
 
-        -webkit-animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
-        -moz-animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
-        animation: LoginBackground 30s cubic-bezier(0.77, 0, 0.175, 1) infinite;
-        background-size: 200% 200%;
+        background-size: cover;
+        background-position: top, center;
+        background-repeat: no-repeat, no-repeat;
 
         .logo {
             display: none;
@@ -45,40 +44,6 @@
                 .st0 {
                     fill: #ffffff;
                 }
-            }
-        }
-
-        @-webkit-keyframes LoginBackground {
-            0% {
-                background-position: 58% 0;
-            }
-            50% {
-                background-position: 43% 100%;
-            }
-            100% {
-                background-position: 58% 0;
-            }
-        }
-        @-moz-keyframes LoginBackground {
-            0% {
-                background-position: 58% 0;
-            }
-            50% {
-                background-position: 43% 100%;
-            }
-            100% {
-                background-position: 58% 0;
-            }
-        }
-        @keyframes LoginBackground {
-            0% {
-                background-position: 58% 0;
-            }
-            50% {
-                background-position: 43% 100%;
-            }
-            100% {
-                background-position: 58% 0;
             }
         }
 
