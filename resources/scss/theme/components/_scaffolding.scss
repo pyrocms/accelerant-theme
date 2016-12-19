@@ -2,10 +2,6 @@ html,
 body {
     height: 100%;
     background-color: #f1f1f1;
-    background-size: 100px auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('{{ img("theme::img/icon-watermark.svg").path }}');
 }
 
 * {

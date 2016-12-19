@@ -2,6 +2,10 @@
     overflow: hidden;
     padding-top: 70px;
     margin-left: 240px;
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('{{ img("theme::img/icon-watermark.svg").path }}');
 }
 
 @include media-breakpoint-down(md) {

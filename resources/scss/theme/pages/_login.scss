@@ -1,6 +1,10 @@
 #login {
     height: 100%;
     min-width: 0;
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('{{ img("theme::img/icon-watermark.svg").path }}');
 
     &.success {
         .logo-container {
