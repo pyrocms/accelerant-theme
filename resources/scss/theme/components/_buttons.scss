@@ -7,7 +7,7 @@
 }
 
 .btn-default {
-    @include button-variant(#ffffff !important, $brand-inverse, $brand-inverse);
+    @include button-variant(#333333 !important, $brand-inverse, $brand-inverse);
 }
 
 .btn-inverse {
