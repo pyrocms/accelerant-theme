@@ -593,8 +593,8 @@ $state-info-bg:                  $brand-info !default;
 $state-info-border:              $state-info-bg !default;
 
 $state-warning-text:             #ffffff !default;
-$state-warning-bg:               #fcf8e3 !default;
-$mark-bg:                        $state-warning-bg !default;
+$state-warning-bg:               $brand-warning !default;
+$mark-bg:                        $brand-warning !default;
 $state-warning-border:           $state-warning-bg !default;
 
 $state-danger-text:              #ffffff !default;
