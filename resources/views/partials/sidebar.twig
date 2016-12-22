@@ -1,11 +1,11 @@
 <aside id="sidebar" class="scrollbar">
 
     <ul>
-        {% for module in addons().modules().navigation() %}
-            <li class="{{ module.active ? 'active' }} variant-border">
-                <a href="{{ url_to('admin/' ~ module.slug) }}">
-                    {{ icon(module.icon) }}
-                    <span>{{ trans(module.title) }}</span>
+        {% for navigation in template.cp.navigation %}
+            <li class="{{ navigation.active ? 'active' }} variant-border">
+                <a {{ html_attributes(navigation.attributes) }}>
+                    {{ icon(navigation.icon ?: 'fa fa-puzzle-piece') }}
+                    <span>{{ trans(navigation.title) }}</span>
                 </a>
             </li>
         {% endfor %}
