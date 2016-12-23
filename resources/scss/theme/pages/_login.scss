@@ -110,6 +110,20 @@
         .logo-container {
             width: 100%;
 
+            &:after {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                opacity: 0.4;
+                position: absolute;
+                background-size: cover;
+                background-position: top, center;
+                background-repeat: no-repeat, no-repeat;
+                background-image: url('{{ image_path("theme::img/bg.svg") }}');
+            }
+
             .logo {
                 display: none;
             }
