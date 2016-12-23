@@ -97,6 +97,55 @@
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
 
+                &:before {
+                    top: -7px;
+                    left: 9px;
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    border-bottom: 7px solid #cccccc;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-bottom-color: rgba(0, 0, 0, 0.2);
+                }
+
+                &:after {
+                    content: '';
+                    top: -6px;
+                    left: 10px;
+                    position: absolute;
+                    display: inline-block;
+                    border-bottom: 6px solid white;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                }
+
+                &.dropdown-menu-right {
+
+                    &:before {
+                        right: 24px;
+                        left: unset;
+                    }
+
+                    &:after {
+                        right: 25px;
+                        left: unset;
+                    }
+                }
+
+                .dropdown-item {
+                    display: block;
+
+                    i {
+                        color: #a8a8a8;
+                        margin-right: .4rem;
+                    }
+
+                    a {
+                        display: block;
+                    }
+                }
+
                 .notification-title {
                     color: #000000;
                     font-size: 16px;
