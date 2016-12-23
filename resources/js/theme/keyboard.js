@@ -2,10 +2,19 @@ $(function () {
 
     var delta = 500;
     var last = 0;
+    var keys = [];
 
-    $('body').on('keydown', function (e) {
+    $(document).keydown(function (e) {
 
-        if (e.ctrlKey || e.metaKey) {
+        keys[e.keyCode] = true;
+
+        var count = 0;
+
+        for (var i = 0; i < keys.length; i++) {
+            if (keys[i]) count++;
+        }
+
+        if (count == 1 && (e.ctrlKey || e.metaKey)) {
 
             var time = new Date();
 
@@ -18,5 +27,9 @@ $(function () {
 
             last = time;
         }
-    })
+    });
+
+    $(document).keyup(function (e) {
+        delete keys[e.keyCode];
+    });
 });
