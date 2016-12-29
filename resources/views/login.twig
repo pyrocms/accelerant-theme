@@ -20,6 +20,8 @@
 
             <div class="col-sm-12 offset-sm-6">
 
+                {% include "theme::partials/messages" %}
+
                 {% set form = form('login').redirect('admin').get() %}
 
                 {{ form.open|raw }}
