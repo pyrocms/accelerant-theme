@@ -42,12 +42,9 @@
             svg {
                 width: 75px;
                 height: 129px;
+                fill: #ffffff;
                 margin-top: -30px;
                 vertical-align: middle;
-
-                .st0 {
-                    fill: #ffffff;
-                }
             }
         }
 
@@ -63,6 +60,12 @@
             label {
                 color: #ffffff;
                 margin-top: .35rem;
+            }
+
+            button {
+                &:hover {
+                    @include button-outline(#ffffff);
+                }
             }
         }
     }

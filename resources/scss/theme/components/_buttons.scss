@@ -50,15 +50,16 @@
         @include button-outline($brand-inverse);
     }
 
-    @include button-variant(#ffffff !important, $brand-inverse, $brand-inverse);
+    @include button-variant(#ffffff, $brand-inverse, $brand-inverse);
 }
 
 .btn-white {
-    @include button-variant(#333333 !important, #ffffff, #ffffff);
 
-    &.button-outline {
+    &.btn-outline {
         @include button-outline(#ffffff);
     }
+
+    @include button-variant(#333333, #ffffff, #ffffff);
 }
 
 /**

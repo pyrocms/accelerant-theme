@@ -1,5 +1,5 @@
 @mixin button-outline($color) {
-    color: $color !important;
+    color: $color;
     border-color: $color;
-    background: transparent;
+    background-color: transparent;
 }
