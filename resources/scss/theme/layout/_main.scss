@@ -11,5 +11,6 @@
 @include media-breakpoint-down(md) {
     #main {
         margin-left: 0;
+        transition: min-height 100ms;
     }
 }
