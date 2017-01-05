@@ -4,6 +4,7 @@
     margin-left: 240px;
     background-size: 100px auto;
     background-repeat: no-repeat;
+    transition: min-height 100ms;
     background-position: center center;
     background-image: url('{{ img("theme::img/icon-watermark.svg").path }}');
 }
@@ -11,6 +12,5 @@
 @include media-breakpoint-down(md) {
     #main {
         margin-left: 0;
-        transition: min-height 100ms;
     }
 }
