@@ -5,7 +5,7 @@
     background-size: 100px auto;
     background-repeat: no-repeat;
     transition: min-height 100ms;
-    background-position: center center;
+    background-position: center 40vh;
     background-image: url('{{ img("theme::img/icon-watermark.svg").path }}');
 }
 
