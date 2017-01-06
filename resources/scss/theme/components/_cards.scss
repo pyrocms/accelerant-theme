@@ -9,35 +9,6 @@
     }
 }
 
-.card-corner {
-    right: 0;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    border-right: 20px solid;
-    border-top: transparent 20px solid;
-
-    &.card-corner-primary {
-        border-right-color: $brand-primary;
-    }
-
-    &.card-corner-success {
-        border-right-color: $brand-success;
-    }
-
-    &.card-corner-warning {
-        border-right-color: $brand-warning;
-    }
-
-    &.card-corner-danger {
-        border-right-color: $brand-danger;
-    }
-
-    &.card-corner-info {
-        border-right-color: $brand-info;
-    }
-}
-
 .card-label {
     color: #ffffff;
     display: inline-block;
