@@ -1,7 +1,7 @@
 #login {
     height: 100%;
     min-width: 0;
-    background-size: 100px auto;
+    background-size: 55px 100px;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('{{ img("theme::img/watermark.svg").path }}');
