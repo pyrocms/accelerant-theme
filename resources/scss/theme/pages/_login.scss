@@ -4,7 +4,7 @@
     background-size: 100px auto;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('{{ img("theme::img/icon-watermark.svg").path }}');
+    background-image: url('{{ img("theme::img/watermark.svg").path }}');
 
     &.success {
         .logo-container {
@@ -40,8 +40,8 @@
             display: none;
 
             svg {
-                width: 75px;
-                height: 129px;
+                width: 45px;
+                height: 82px;
                 fill: #ffffff;
                 margin-top: -30px;
                 vertical-align: middle;
@@ -79,8 +79,8 @@
         font-family: 'Montserrat', sans-serif;
 
         svg {
-            width: 75px;
-            height: 129px;
+            width: 45px;
+            height: 82px;
             margin-top: -30px;
             vertical-align: middle;
 
@@ -147,7 +147,8 @@
                 margin-bottom: 2rem;
 
                 svg {
-                    width: 100px;
+                    width: 55px;
+                    height: 100px;
                 }
             }
         }
