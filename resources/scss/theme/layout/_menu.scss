@@ -40,8 +40,28 @@
             }
 
             &.active {
-                a {
+                > a {
                     color: #eeeeee;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    a {
+                        color: rgba(255, 255, 255, 0.3);
+
+                        &:hover {
+                            color: #eeeeee;
+                        }
+                    }
+
+                    &.active {
+                        > a {
+                            color: #eeeeee;
+                        }
+                    }
                 }
             }
         }

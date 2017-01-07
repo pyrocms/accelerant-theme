@@ -1,0 +1,22 @@
+{% import _self as menu %}
+
+{% macro section(sections, section) %}
+    {% if not section.hidden %}
+        <li class="{{ section.highlighted ? 'active' }} {{ section.class }}">
+            <a {{ html_attributes(section.attributes) }}>
+                {{ section.icon ? icon(section.icon)|raw }}
+                {{ trans(section.title)|raw }}
+            </a>
+
+            {% if section.highlighted %}
+                <ul>
+                    {% for child in sections.children(section.slug) %}
+                        {% if not child.hidden %}
+                            {{ _self.section(sections, child) }}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endif %}
+{% endmacro %}
