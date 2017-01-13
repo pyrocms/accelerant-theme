@@ -1,7 +1,7 @@
 var initModal = function () {
 
-    var modal = $('.modal');
-    var remote = $('.modal.remote');
+    var modal = $('.modal:not(data-initialized)');
+    var remote = $('.modal.remote:not(data-initialized)');
 
     var loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
 
@@ -56,12 +56,12 @@ var initModal = function () {
             });
         }
     });
+
+    // Mark as initialized.
+    modal.attr('data-initialized', '');
+    remote.attr('data-initialized', '');
 };
 
 $(document).ready(function () {
-    initModal();
-});
-
-$(document).ajaxComplete(function () {
     initModal();
 });
