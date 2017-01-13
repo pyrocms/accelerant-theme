@@ -4,7 +4,7 @@ $(function () {
      * Handle double-tap Command || Control
      * for toggling the sidebar collapse.
      */
-    var delta = 400;
+    var delta = 250;
     var last = 0;
 
     $(document).keydown(function (e) {
