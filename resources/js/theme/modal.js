@@ -1,7 +1,7 @@
 var initModal = function () {
 
-    var modal = $('.modal:not(data-initialized)');
-    var remote = $('.modal.remote:not(data-initialized)');
+    var modal = $('.modal:not([data-initialized])');
+    var remote = $('.modal.remote:not([data-initialized])');
 
     var loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
 
@@ -63,5 +63,9 @@ var initModal = function () {
 };
 
 $(document).ready(function () {
+    initModal();
+});
+
+$(document).ajaxComplete(function () {
     initModal();
 });
