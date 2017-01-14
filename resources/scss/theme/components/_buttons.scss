@@ -57,6 +57,14 @@
 
     &.btn-outline {
         @include button-outline(#ffffff);
+
+        &:focus,
+        &:active,
+        &:hover {
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+            background-color: transparent !important;
+        }
     }
 
     @include button-variant(#333333, #ffffff, #ffffff);
