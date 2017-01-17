@@ -18,4 +18,14 @@ $(function () {
 
     // Flush the footer to the bottom.
     $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight());
+
+    // Add a hover listener to the sidebar
+    $('#sidebar').on('mouseover', function () {
+        $('body').addClass('expand');
+    });
+
+    $('#sidebar').on('mouseout', function () {
+        $('body').removeClass('expand');
+    });
+
 });
