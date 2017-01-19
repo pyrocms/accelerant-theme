@@ -7,6 +7,14 @@
         box-shadow: none;
         background: transparent;
     }
+
+    &.card-flex {
+        display: flex;
+
+        .card-block {
+            width: 100%;
+        }
+    }
 }
 
 .card-label {
@@ -46,7 +54,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-	.card-block {
-		padding: .5em;
-	}
+    .card-block {
+        padding: .5em;
+    }
 }
