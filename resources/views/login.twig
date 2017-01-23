@@ -54,6 +54,14 @@
 
                 {{ form.close|raw }}
 
+                <div class="clearfix"></div>
+
+                <a href="{{ url_route('anomaly.module.users::password.forgot') }}">
+                    <small>
+                        {{ trans('anomaly.module.users::message.forgot_password') }}
+                    </small>
+                </a>
+
             </div>
         </div>
     </div>
