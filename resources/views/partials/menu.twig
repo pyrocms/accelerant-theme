@@ -2,6 +2,13 @@
 
     <ul>
         {% for section in template.cp.sections.root() %}
+
+            {% if section.label %}
+                <li class="section-label">
+                    <span>{{ trans(section.label)|raw }}</span>
+                </li>
+            {% endif %}
+
             <li class="{{ section.highlighted ? 'active' }} {{ section.class }}">
                 <a {{ html_attributes(section.attributes) }}>
                     {{ section.icon ? icon(section.icon)|raw }}
