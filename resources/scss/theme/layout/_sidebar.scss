@@ -45,6 +45,14 @@
                 }
             }
 
+            &.dragged {
+                opacity: 0.3;
+            }
+
+            &.placeholder {
+                display: none;
+            }
+
             &.active {
                 box-sizing: border-box;
                 border-left: 3px solid #ffffff;
