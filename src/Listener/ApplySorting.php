@@ -58,6 +58,17 @@ class ApplySorting
             $navigation = array_merge(array_flip(unserialize($preferences)), $navigation);
         }
 
+        /**
+         * Remove non-installed addons
+         * cause they won't be in the nav.
+         */
+        $navigation = array_filter(
+            $navigation,
+            function ($item) {
+                return is_array($item);
+            }
+        );
+
         $builder->setNavigation($navigation);
     }
 }
