@@ -18,4 +18,11 @@ $(function () {
 
     // Flush the footer to the bottom.
     $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight());
+
+    // Fix top form controls when scrolling.
+    // $('form .controls:first-of-type').affix({
+    //     offset: {
+    //         top: 120
+    //     }
+    // });
 });
