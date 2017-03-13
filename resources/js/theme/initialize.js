@@ -25,43 +25,61 @@ $(function () {
     //     }
     // });
 
-    var $table = $('table.table'), scrollTop, output;
+    var $table = $('table.table'), scrollTop, columns;
 
     if ($table.length) {
+
         var
             $topBar = $('#topbar'),
             $thead = $table.find('thead'),
             $tbody = $table.find('tbody'),
 
-            topBarHeight = $topBar.height(),
             tableWidth = $table.width(),
-            tableTop = $table.closest('.card').offset().top,
+            topBarHeight = $topBar.height(),
+            tableTop = $table.offset().top,
 
             tableColsSizes = (function ($tbody) {
-                output = [];
+
+                columns = [];
 
                 $tbody.find('tr:first-child td').each(function (index, el) {
-                    output.push($(el).width());
+                    columns.push($(el).width());
                 });
 
-                return output;
+                return columns;
             })($tbody);
 
-        $thead.css({ backgroundColor: '#fff', width: tableWidth + 'px' });
+        /**
+         * Make sure the table head
+         * is visible as an overlay.
+         */
+        $thead.css({backgroundColor: '#fff', width: tableWidth + 'px'});
 
         $(window).on('scroll', function (event) {
+
             scrollTop = $(event.target.body).scrollTop();
 
+            /**
+             * Manually size all of
+             * the heads / columns.
+             */
             $thead.find('th').each(function (index, el) {
                 $(el).width(tableColsSizes[index] + 'px');
             });
 
+            $tbody.find('tr').first().find('td').each(function (index, el) {
+                $(el).width(tableColsSizes[index] + 'px');
+            });
+
+            /**
+             * Fix if we're scrolled past.
+             */
             if (scrollTop > tableTop - topBarHeight) {
-                $thead.css({ position: 'fixed', top: topBarHeight + 'px' });
-                $table.css({ marginTop: $thead.height() + 'px' });
+                $thead.css({position: 'fixed', top: topBarHeight + 'px'});
+                $table.css({marginTop: $thead.height() + 'px'});
             } else {
-                $thead.css({ position: 'relative', top: '0px' });
-                $table.css({ marginTop: '0' });
+                $thead.css({position: 'relative', top: '0px'});
+                $table.css({marginTop: '0'});
             }
         });
     }
