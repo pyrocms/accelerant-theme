@@ -24,7 +24,7 @@ $(function () {
     //         top: 120
     //     }
     // });
-    var $table = $('table.table'), scrollTop, columns;
+    var $table = $('table.table:not(.no-fix)'), scrollTop, columns;
 
     if ($table.length) {
 
