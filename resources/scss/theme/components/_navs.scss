@@ -1,5 +1,6 @@
 
 .nav {
+
     &.nav-sections {
         margin-bottom: 1em;
         background-color: #eaeced;
@@ -18,6 +19,21 @@
                 a {
                     color: $gray;
                     background: #ffffff;
+                }
+            }
+        }
+
+        &.nav-stacked {
+            float: left;
+            width: 200px;
+            margin-bottom: 0;
+
+            .nav-item {
+                display: block;
+                text-align: left;
+
+                .nav-link {
+                    padding: 0.5em 1em;
                 }
             }
         }

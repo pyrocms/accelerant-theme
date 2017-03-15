@@ -7,46 +7,32 @@
         box-shadow: none;
         background: transparent;
     }
-}
 
-.card-label {
-    color: #ffffff;
-    display: inline-block;
-    margin-bottom: $card-spacer-y/2;
-    padding: $card-spacer-y/2 ($card-spacer-x * 2);
+    &.card-flex {
+        display: flex;
 
-    &.card-label-primary {
-        background: $brand-primary;
+        .card-block {
+            width: 100%;
+        }
     }
 
-    &.card-label-success {
-        background: $brand-success;
+    .card-header {
+        background-color: #fafafa;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
     }
 
-    &.card-label-warning {
-        background: $brand-warning;
-    }
+    .card-title {
+        margin: 0;
+        color: darken($gray-light, 15%);
 
-    &.card-label-danger {
-        background: $brand-danger;
-    }
-
-    &.card-label-info {
-        background: $brand-info;
-    }
-}
-
-.card-title {
-    margin: 0;
-    color: darken($gray-light, 20%);
-
-    small {
-        color: $gray-light;
+        small {
+            color: $gray-light;
+        }
     }
 }
 
 @include media-breakpoint-down(sm) {
-	.card-block {
-		padding: .5em;
-	}
+    .card-block {
+        padding: .5em;
+    }
 }

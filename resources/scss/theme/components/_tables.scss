@@ -48,6 +48,10 @@
 .table-filters {
     padding: 1rem;
     border-top: 1px solid $table-border-color;
+
+    .form-group {
+        margin-bottom: 0 !important;
+    }
 }
 
 .no-results {

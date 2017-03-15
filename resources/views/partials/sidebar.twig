@@ -1,9 +1,9 @@
 <aside id="sidebar" class="scrollbar">
 
     <ul>
-        {% for navigation in template.cp.navigation %}
-            <li class="{{ navigation.active ? 'active' }} variant-border">
-                <a {{ html_attributes(navigation.attributes) }}>
+        {% for key, navigation in template.cp.navigation %}
+            <li class="{{ navigation.active ? 'active' }} variant-border" data-slug="{{ navigation.slug }}">
+                <a {{ html_attributes(navigation.attributes) }} title="{{ trans(navigation.title) }}">
                     {{ icon(navigation.icon ?: 'fa fa-puzzle-piece') }}
                     <span>{{ trans(navigation.title) }}</span>
                 </a>

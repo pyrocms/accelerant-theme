@@ -19,7 +19,8 @@
         > li {
             width: 100%;
 
-            > a {
+            > a,
+            span {
                 height: 100%;
                 display: block;
                 font-size: 18px;
@@ -45,12 +46,29 @@
                 }
             }
 
+            &.section-label {
+                span {
+                    font-size: 10px;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    line-height: 2rem;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.15);
+                    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.15);
+                    }
+                }
+            }
+
             ul {
                 list-style: none;
 
                 li {
                     a {
                         color: rgba(255, 255, 255, 0.3);
+                        line-height: 39px;
 
                         &:hover {
                             color: #eeeeee;

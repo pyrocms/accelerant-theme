@@ -1,7 +1,15 @@
 {% import _self as menu %}
 
 {% macro section(sections, section) %}
+
+    {% if section.label %}
+        <li class="section-label">
+            <span>{{ trans(section.label)|raw }}</span>
+        </li>
+    {% endif %}
+
     <li class="{{ section.highlighted ? 'highlighted' }} {{ section.active ? 'active' }} {{ section.class }}">
+
         <a {{ html_attributes(section.attributes) }}>
             {{ section.icon ? icon(section.icon)|raw }}
             {{ trans(section.title)|raw }}

@@ -53,6 +53,20 @@
         .buttons {
             float: right;
         }
+
+        &.affix {
+            right: 0;
+            top: 70px;
+            left: 240px;
+            position: fixed;
+            border-radius: 0;
+            z-index: $zindex-modal - 100;
+            //padding: 0 ($grid-gutter-width / 2);
+
+            + div {
+                margin-top: 115px;
+            }
+        }
     }
 
     label {
@@ -70,6 +84,35 @@
 .form-control {
     @include border-radius($border-radius);
 }
+
+//@include media-breakpoint-down(sm) {
+//    .form {
+//        .controls {
+//            &:first-of-type {
+//                display: none;
+//            }
+//        }
+//    }
+//}
+//
+//@include media-breakpoint-down(md) {
+//    .form {
+//        .controls {
+//            &.affix {
+//                top: unset;
+//                left: unset;
+//                right: unset;
+//                position: relative;
+//                border-radius: unset;
+//                z-index: unset;
+//
+//                + div {
+//                    margin-top: unset;
+//                }
+//            }
+//        }
+//    }
+//}
 
 @include media-breakpoint-down(sm) {
     .form {
