@@ -4,7 +4,7 @@
         {% for key, navigation in template.cp.navigation %}
             <li class="{{ navigation.active ? 'active' }} variant-border" data-slug="{{ navigation.slug }}">
                 <a {{ html_attributes(navigation.attributes) }} title="{{ trans(navigation.title) }}">
-                    {{ icon(navigation.icon ?: 'fa fa-puzzle-piece') }}
+                    {{ navigation.icon()|raw }}
                     <span>{{ trans(navigation.title) }}</span>
                 </a>
             </li>

@@ -45,8 +45,27 @@
                     text-align: center;
                 }
 
+                svg {
+                    width: auto;
+                    height: auto;
+                    text-align: center;
+                    max-width: 1.25rem;
+                    max-height: 1.25rem;
+                    vertical-align: middle;
+
+                    path {
+                        fill: rgba(255, 255, 255, 0.3);
+                    }
+                }
+
                 &:hover {
                     color: #eeeeee;
+
+                    svg {
+                        path {
+                            fill: #eeeeee;
+                        }
+                    }
                 }
             }
 
@@ -66,6 +85,12 @@
                 a {
                     color: #eeeeee;
                     margin-left: -3px;
+
+                    svg {
+                        path {
+                            fill: #eeeeee;
+                        }
+                    }
                 }
             }
         }
