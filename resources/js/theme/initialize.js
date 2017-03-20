@@ -18,51 +18,86 @@ $(function () {
     // Flush the footer to the bottom.
     $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight());
 
-    // Fix top form controls when scrolling.
-    // $('form .controls:first-of-type').affix({
-    //     offset: {
-    //         top: 120
-    //     }
-    // });
+    var $table = $('table.table');
 
-    var $table = $('table.table'), scrollTop, output;
+    if ($table.length === 1) {
 
-    if ($table.length) {
-        var
-            $topBar = $('#topbar'),
-            $thead = $table.find('thead'),
-            $tbody = $table.find('tbody'),
+        var $window = $(window);
+        var $topBar = $('#topbar');
+        var $thead = $table.find('thead');
+        var topBarHeight = $topBar.height();
+        var tableTop = $table.offset().top;
 
-            topBarHeight = $topBar.height(),
-            tableWidth = $table.width(),
-            tableTop = $table.closest('.card').offset().top,
+        /**
+         * Gets the table cols sizes.
+         *
+         * @param      {$Object}  $tbody  The tbody
+         * @return     {Array}    The table cols sizes.
+         */
+        var getTableColsSizes = function ($tbody) {
+            var columns = [];
 
-            tableColsSizes = (function ($tbody) {
-                output = [];
+            $tbody.find('tr:first-child td').each(function (index, el) {
+                columns.push($(el).width());
+            });
 
-                $tbody.find('tr:first-child td').each(function (index, el) {
-                    output.push($(el).width());
-                });
+            return columns;
+        };
 
-                return output;
-            })($tbody);
-
-        $thead.css({ backgroundColor: '#fff', width: tableWidth + 'px' });
-
-        $(window).on('scroll', function (event) {
-            scrollTop = $(event.target.body).scrollTop();
+        /**
+         * Manually size all of the heads / columns.
+         */
+        var setTableColsSizes = function () {
+            var $tbody = $('table.table').children('tbody');
+            var tableColsSizes = getTableColsSizes($tbody);
 
             $thead.find('th').each(function (index, el) {
                 $(el).width(tableColsSizes[index] + 'px');
             });
 
-            if (scrollTop > tableTop - topBarHeight) {
-                $thead.css({ position: 'fixed', top: topBarHeight + 'px' });
-                $table.css({ marginTop: $thead.height() + 'px' });
-            } else {
+            $tbody.find('tr').first().find('td').each(function (index, el) {
+                $(el).width(tableColsSizes[index] + 'px');
+            });
+
+            checkFixed();
+
+            $thead.css({ width: $table.width() + 'px' });
+        };
+
+        /**
+         * Determines if at top.
+         *
+         * @return     {boolean}  True if at top, False otherwise.
+         */
+        var isAtTop = function () {
+            if (document.body.scrollTop > tableTop - topBarHeight) {
+                return false;
+            }
+
+            return true;
+        };
+
+        /**
+         * Fix if we're scrolled past.
+         */
+        var checkFixed = function () {
+            if (window.innerWidth < 992 || isAtTop()) {
                 $thead.css({ position: 'relative', top: '0px' });
                 $table.css({ marginTop: '0' });
+            } else {
+                $thead.css({ position: 'fixed', top: topBarHeight + 'px' });
+                $table.css({ marginTop: $thead.height() + 'px' });
             }
-        });
+        };
+
+        /**
+         * Make sure the table head is visible as an overlay.
+         */
+        $thead.css({ backgroundColor: '#fff', width: $table.width() + 'px' });
+
+        setTableColsSizes();
+
+        $window.on('scroll', checkFixed);
+        $window.on('resize', setTableColsSizes);
     }
 });
