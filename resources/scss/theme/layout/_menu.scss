@@ -41,7 +41,7 @@
             }
 
             &.active {
-                a {
+                > a {
                     color: #eeeeee;
                 }
             }
@@ -58,6 +58,27 @@
 
                     &:hover {
                         color: rgba(255, 255, 255, 0.15);
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    a {
+                        color: rgba(255, 255, 255, 0.3);
+                        line-height: 39px;
+
+                        &:hover {
+                            color: #eeeeee;
+                        }
+                    }
+
+                    &.active {
+                        > a {
+                            color: #eeeeee;
+                        }
                     }
                 }
             }
