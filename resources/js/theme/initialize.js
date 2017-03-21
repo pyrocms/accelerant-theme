@@ -83,4 +83,43 @@ $(function () {
     //         }
     //     });
     // }
+
+    var $window = $(window);
+    var $form = $('form.form');
+    var $controls = $form.children('.controls');
+    var controlsHeight = $controls.height();
+
+    var doFixed = function ($el) {
+        $el.addClass('affix');
+        $el.css({width: $form.width() + 'px'});
+        $el.prev().css({marginBottom: 'calc(' + controlsHeight + 'px + 1.5rem + 1.5rem)'});
+    };
+
+    var doUnfixed = function ($el) {
+        $el.removeClass('affix');
+        $el.css({width: 'inherit'});
+        $el.prev().removeAttr('style');
+    };
+
+    var isAtBottom = function () {
+
+        var windowHeight = window.innerHeight;
+        var scrollTop = document.body.scrollTop;
+        var documentHeight = document.body.scrollHeight;
+
+        return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
+    };
+
+    var checkFixed = function () {
+        if (window.innerWidth < 992 || isAtBottom()) {
+            doUnfixed($controls);
+        } else {
+            doFixed($controls);
+        }
+    };
+
+    // Fixed controls
+    checkFixed();
+    $window.on('resize', checkFixed);
+    $window.on('scroll', checkFixed);
 });
