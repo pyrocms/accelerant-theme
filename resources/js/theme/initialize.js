@@ -1,4 +1,5 @@
-$(function () {
+$(document).on('ready', function () {
+
     // Add CSRF ajax requests.
     $.ajaxSetup({
         headers: {
@@ -71,7 +72,10 @@ $(function () {
          * @return     {boolean}  True if at top, False otherwise.
          */
         var isAtTop = function () {
-            return document.body.scrollTop <= tableTop - topBarHeight;
+
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+            return scrollTop <= tableTop - topBarHeight;
         };
 
         /**
@@ -120,8 +124,8 @@ $(function () {
         var isAtBottom = function () {
 
             var windowHeight = window.innerHeight;
-            var scrollTop = document.body.scrollTop;
             var documentHeight = document.body.scrollHeight;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
             return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
         };
