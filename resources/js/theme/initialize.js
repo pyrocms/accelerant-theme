@@ -72,10 +72,7 @@ $(document).on('ready', function () {
          * @return     {boolean}  True if at top, False otherwise.
          */
         var isAtTop = function () {
-
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-            return scrollTop <= tableTop - topBarHeight;
+            return $('body').scrollTop() <= tableTop - topBarHeight;
         };
 
         /**
@@ -123,10 +120,10 @@ $(document).on('ready', function () {
 
         var isAtBottom = function () {
 
+            var scrollTop = $('body').scrollTop();
             var windowHeight = window.innerHeight;
             var documentHeight = document.body.scrollHeight;
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
+console.log(scrollTop);
             return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
         };
 
