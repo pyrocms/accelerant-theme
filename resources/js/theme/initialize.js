@@ -123,7 +123,7 @@ $(document).on('ready', function () {
             var scrollTop = $('body').scrollTop();
             var windowHeight = window.innerHeight;
             var documentHeight = document.body.scrollHeight;
-console.log(scrollTop);
+
             return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
         };
 
