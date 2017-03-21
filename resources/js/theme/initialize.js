@@ -20,6 +20,7 @@ $(document).on('ready', function () {
     $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight());
 
     var $window = $(window);
+
     var $table = $('table.table:not(.no-affix)');
     var $responsiveTable = $table.closest('.table-responsive');
 
@@ -103,19 +104,19 @@ $(document).on('ready', function () {
 
     if ($form.length === 1) {
 
-        var $controls = $form.children('.controls');
+        var $controls = $form.find('> .controls').first();
         var controlsHeight = $controls.height();
 
         var affixControls = function ($el) {
             $el.addClass('affix');
             $el.css({width: $form.width() + 'px'});
-            $el.prev().css({marginBottom: 'calc(' + controlsHeight + 'px + 1.5rem + 1.5rem)'});
+            $form.css({paddingBottom: 'calc(' + controlsHeight + 'px + 1.5rem)'});
         };
 
         var releaseControls = function ($el) {
             $el.removeClass('affix');
             $el.css({width: 'inherit'});
-            $el.prev().removeAttr('style');
+            $form.removeAttr('style');
         };
 
         var isAtBottom = function () {
@@ -123,7 +124,7 @@ $(document).on('ready', function () {
             var scrollTop = $('body').scrollTop();
             var windowHeight = window.innerHeight;
             var documentHeight = document.body.scrollHeight;
-
+            console.log(scrollTop+' + '+windowHeight+' - '+documentHeight+' + '+controlsHeight+' + '+30+' > '+0);
             return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
         };
 
