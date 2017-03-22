@@ -124,7 +124,7 @@ $(document).on('ready', function () {
             var scrollTop = $('body').scrollTop();
             var windowHeight = window.innerHeight;
             var documentHeight = document.body.scrollHeight;
-            console.log(scrollTop+' + '+windowHeight+' - '+documentHeight+' + '+controlsHeight+' + '+30+' > '+0);
+
             return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
         };
 
