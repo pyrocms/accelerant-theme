@@ -17,7 +17,7 @@
 
         {% if section.highlighted %}
             <ul>
-                {% for child in sections.children(section.slug) %}
+                {% for child in sections.children(section.slug).visible() %}
                     {{ _self.section(sections, child) }}
                 {% endfor %}
             </ul>
