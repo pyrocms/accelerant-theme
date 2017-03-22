@@ -1,7 +1,7 @@
 <aside id="menu" class="scrollbar">
 
     <ul>
-        {% for section in template.cp.sections.root() %}
+        {% for section in template.cp.sections.root().visible() %}
 
             {% if section.label %}
                 <li class="section-label">
