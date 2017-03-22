@@ -100,7 +100,7 @@ $(document).on('ready', function () {
         $window.on('resize', setTableColsSizes);
     }
 
-    var $form = $('form.form');
+    var $form = $('form.form:not(.no-affix)');
 
     if ($form.length === 1) {
 
