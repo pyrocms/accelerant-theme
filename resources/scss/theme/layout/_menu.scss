@@ -40,8 +40,9 @@
                 }
             }
 
-            &.active {
-                a {
+            &.active,
+            &.highlighted {
+                > a {
                     color: #eeeeee;
                 }
             }
