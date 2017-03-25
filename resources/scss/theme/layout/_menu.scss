@@ -19,16 +19,15 @@
         > li {
             width: 100%;
 
-            > a,
-            span {
+            > a {
                 height: 100%;
-                display: block;
                 font-size: 18px;
                 padding: 0 10px;
                 margin: 8px 10px;
                 line-height: 39px;
                 position: relative;
                 white-space: nowrap;
+                display: inline-block;
                 color: rgba(255, 255, 255, 0.3);
 
                 span {
