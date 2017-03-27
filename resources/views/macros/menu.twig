@@ -1,0 +1,25 @@
+{% import _self as menu %}
+
+{% macro section(sections, section) %}
+    <li class="{{ section.highlighted ? 'highlighted' }} {{ section.active ? 'active' }} {{ section.class }}">
+
+        <a {{ html_attributes(section.attributes) }}>
+            {{ section.icon ? icon(section.icon)|raw }}
+            {{ trans(section.title)|raw }}
+
+            {% if section.label %}
+                <span class="tag tag-{{ section.context }}">
+                    {{ trans(section.label)|raw }}
+                </span>
+            {% endif %}
+        </a>
+
+        {% if section.highlighted %}
+            <ul>
+                {% for child in sections.children(section.slug).visible() %}
+                    {{ _self.section(sections, child) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}

@@ -1,20 +1,10 @@
+{% import "pyrocms.theme.accelerant::macros/menu.twig" as menu %}
+
 <aside id="menu" class="scrollbar">
 
     <ul>
-        {% for section in template.cp.sections.root() %}
-
-            {% if section.label %}
-                <li class="section-label">
-                    <span>{{ trans(section.label)|raw }}</span>
-                </li>
-            {% endif %}
-
-            <li class="{{ section.highlighted ? 'active' }} {{ section.class }}">
-                <a {{ html_attributes(section.attributes) }}>
-                    {{ section.icon ? icon(section.icon)|raw }}
-                    {{ trans(section.title)|raw }}
-                </a>
-            </li>
+        {% for section in template.cp.sections.root().visible() %}
+            {{ menu.section(template.cp.sections, section) }}
         {% endfor %}
     </ul>
 

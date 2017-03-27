@@ -19,8 +19,7 @@
         > li {
             width: 100%;
 
-            > a,
-            span {
+            > a {
                 height: 100%;
                 display: block;
                 font-size: 18px;
@@ -40,8 +39,9 @@
                 }
             }
 
-            &.active {
-                a {
+            &.active,
+            &.highlighted {
+                > a {
                     color: #eeeeee;
                 }
             }
@@ -58,6 +58,29 @@
 
                     &:hover {
                         color: rgba(255, 255, 255, 0.15);
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding-left: .5rem;
+                margin-left: 1.25rem;
+                border-left: 1px solid rgba(255, 255, 255, 0.065);
+
+                li {
+                    a {
+                        color: rgba(255, 255, 255, 0.3);
+
+                        &:hover {
+                            color: #eeeeee;
+                        }
+                    }
+
+                    &.active {
+                        > a {
+                            color: #eeeeee;
+                        }
                     }
                 }
             }
