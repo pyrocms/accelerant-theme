@@ -1,3 +1,7 @@
+{% if setting_value('anomaly.module.navigation::enable_hover_mode') %}
+  {{ asset_add('build.css', 'pyrocms.theme.accelerant::scss/theme/hover_mode.scss') }}
+{% endif %}
+
 <aside id="sidebar" class="scrollbar">
 
     <ul>
