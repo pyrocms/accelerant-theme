@@ -4,7 +4,7 @@ $(function () {
      * Handle double-tap Command || Control
      * for toggling the sidebar collapse.
      */
-    var delta = 400;
+    var delta = 250;
     var last = 0;
 
     $(document).keydown(function (e) {
@@ -30,21 +30,19 @@ $(function () {
      */
     $(document).keydown(function (e) {
 
-        if ((e.ctrlKey || e.metaKey) && $.isNumeric(String.fromCharCode(e.which))) {
+        var numeric = $.isNumeric(String.fromCharCode(e.which));
+
+        var target = $('#buttons').find('.btn').eq(String.fromCharCode(e.which) - 1);
+
+        if ((e.ctrlKey || e.metaKey) && numeric && target.length) {
 
             e.preventDefault();
-
-            var target = $('#buttons').find('.btn').eq(String.fromCharCode(e.which) - 1);
-
-            if (!target.length) {
-                return false;
-            }
 
             if (target.is('[data-toggle="modal"]')) {
 
                 target.click();
 
-                return false;
+                return;
             }
 
             window.location = target.attr('href');
