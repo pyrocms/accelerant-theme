@@ -1,27 +1,15 @@
-#search-backdrop {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    z-index: 960;
-    position: fixed;
-    background-color: #212121;
-}
-
 #search {
     top: 70px;
     bottom: 0;
-    width: 360px;
+    width: 240px;
     height: 100%;
-    z-index: 970;
+    z-index: 105;
     margin-top: 0;
     position: fixed;
     overflow-x: scroll;
     overflow-y: hidden;
     background: #ffffff;
     padding-bottom: 70px;
-    box-shadow: 2px 0 0 rgba(66, 66, 66, 0.1);
 
     -webkit-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
     -moz-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);

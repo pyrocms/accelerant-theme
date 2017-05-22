@@ -92,6 +92,7 @@
 
     .nav {
         > li {
+            margin-left: 0;
 
             .dropdown-menu {
                 border-top-left-radius: 0;
@@ -174,7 +175,7 @@
                 padding: 0 15px;
                 line-height: 70px;
                 position: relative;
-                color: #333333 !important;
+                color: #888888 !important;
             }
         }
     }
