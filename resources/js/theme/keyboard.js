@@ -48,4 +48,20 @@ $(function () {
             window.location = target.attr('href');
         }
     });
+
+    /**
+     * Bind (Control || Command) + Space for
+     * jumping to the global search input.
+     */
+    $(document).keydown(function (e) {
+
+        var space = e.which == 0 || e.which == 32; // 0 works in Mozilla and 320 in others
+
+        if ((e.ctrlKey || e.metaKey) && space) {
+
+            e.preventDefault();
+
+            $('input.search-bar').focus();
+        }
+    });
 });
