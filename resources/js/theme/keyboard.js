@@ -30,22 +30,34 @@ $(function () {
      */
     $(document).keydown(function (e) {
 
-        var numeric = $.isNumeric(String.fromCharCode(e.which));
+        // If not pressed CTRL||META - we do not calculate anything,
+        // also do not store any vars in memory for nothing
+        if (!(e.ctrlKey || e.metaKey)) {
+            return;
+        }
 
-        var target = $('#buttons').find('.btn').eq(String.fromCharCode(e.which) - 1);
+        // Caching pressed for not calculating it in future
+        var pressed = String.fromCharCode(e.which);
+        var target;
 
-        if ((e.ctrlKey || e.metaKey) && numeric && target.length) {
+        // If we press digit but not 0 script start work
+        if ($.isNumeric(pressed) && pressed !== '0') {
 
-            e.preventDefault();
+            target = $('#buttons').find('.btn').eq(pressed - 1);
 
-            if (target.is('[data-toggle="modal"]')) {
+            if (target.length) {
 
-                target.click();
+                e.preventDefault();
 
-                return;
+                if (target.is('[data-toggle="modal"]')) {
+
+                    target.click();
+
+                    return;
+                }
+
+                window.location = target.attr('href');
             }
-
-            window.location = target.attr('href');
         }
     });
 
