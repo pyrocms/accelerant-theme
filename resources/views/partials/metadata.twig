@@ -31,13 +31,13 @@
 {{ asset_add("theme.js", "pyrocms.theme.accelerant::js/libraries/*") }}
 {{ asset_add("theme.js", "pyrocms.theme.accelerant::js/theme/*") }}
 
-{{ asset_style("theme.css") }}
-{{ asset_style("build.css", ["live"]) }}
+{{ asset_style("theme.css", ["min"]) }}
+{{ asset_style("build.css", ["live", "min"]) }}
 
 {{ constants() }}
 
-{% for style in asset_styles("styles.css") %}
+{% for style in asset_styles("styles.css", ["min"]) %}
     {{ style|raw }}
 {% endfor %}
 
-{{ asset_script("theme.js") }}
+{{ asset_script("theme.js", ["min"]) }}
