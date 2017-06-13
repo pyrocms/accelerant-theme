@@ -1,29 +1,43 @@
 <section id="topbar">
-
     <div class="topbar-left">
         <a href="/admin" class="logo variant-logo">
             {{ img('theme::img/icon.svg').data|raw }}
             <span>Pyro <small>{{ config('streams::distribution.version') }}</small></span>
         </a>
     </div>
-
     <div class="navbar navbar-default">
         <div class="container-fluid">
-
             <div class="pull-left">
                 <button href="javascript:void(0);" type="button" class="button-menu-mobile"
-                        onclick="$('body').toggleClass('expand');">
-                    <i class="fa fa-bars"></i>
+                onclick="$('body').toggleClass('expand');">
+                <i class="fa fa-bars"></i>
                 </button>
             </div>
+            <form class="navbar-form pull-left " id="search-form">
+                {# 
+                    On the formgroup, i have added search class. 
+                    When you want to display the search result, you add the open
+                    class to it. Leaving it there right now so you can see it working.
+                 #}
+                <div class="form-group open search">
+                    <input type="text" class="form-control search-bar" placeholder="Type to search...">
 
-            {#<form class="navbar-form pull-left" id="search-form">#}
-                {#<div class="form-group">#}
-                    {#<input type="text" class="form-control search-bar" placeholder="Type to search...">#}
-                {#</div>#}
-                {#<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>#}
-            {#</form>#}
-
+                    {# 
+                        Added search__results here. Only styling reasons.
+                        Everything else here is the same as in the bootstrap 4 docs.
+                     #}
+                    <div class="dropdown-menu search__results">
+                        <h3 class="dropdown-header">Pages</h3>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <h3 class="dropdown-header">Posts</h3>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </form>
             <ul class="nav navbar-nav navbar-left pull-right">
                 {#<li class="nav-item">#}
                     {#<a href="#">#}
@@ -50,7 +64,6 @@
                     </ul>
                 </li>
             </ul>
-
         </div>
     </div>
 </section>
