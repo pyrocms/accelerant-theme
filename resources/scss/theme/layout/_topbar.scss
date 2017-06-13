@@ -279,6 +279,7 @@ body.expand
         @include media-breakpoint-up(lg)
         {
             width: auto;
+            border:1px solid #f5f5f5;
         }
     }
 }
