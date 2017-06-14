@@ -74,7 +74,6 @@ $(function () {
             e.preventDefault();
 
             $('input.search-bar').focus();
-            $('#search').find('input').dropdown('toggle');
         }
     });
 });
