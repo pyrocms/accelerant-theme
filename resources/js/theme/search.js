@@ -16,9 +16,13 @@ $(function () {
         form.addClass('open');
     });
 
-    // Close search
-    input.on('blur', function () {
+    // Close search.
+    $(window).click(function() {
         form.removeClass('open');
+    });
+
+    form.click(function(e){
+        e.stopPropagation();
     });
 
     // Handle simple searching
@@ -128,6 +132,8 @@ $(function () {
          * Capture the escape key.
          */
         if (e.which == 27) {
+
+            form.removeClass('open');
 
             items
                 .show()
