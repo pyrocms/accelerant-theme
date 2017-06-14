@@ -128,6 +128,11 @@ $(function () {
          * Capture the escape key.
          */
         if (e.which == 27) {
+
+            items
+                .show()
+                .removeClass('active');
+
             input.val('').blur();
         }
     });
