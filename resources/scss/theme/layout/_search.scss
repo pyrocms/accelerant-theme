@@ -13,3 +13,12 @@
         min-width: 15rem;
     }
 }
+
+@include media-breakpoint-down(sm) {
+
+    body.expand {
+        #search {
+            display: none;
+        }
+    }
+}
