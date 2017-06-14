@@ -1,49 +1,30 @@
 $(function () {
 
     // Detect ajax errors.
-    $(document).ajaxError(function (event, xhr, settings, exception) {
+    $(document).ajaxError(function (event, xhr) {
 
-        // We've been kicked out.
-        if (xhr.status == '401') {
+        var errors = {
+            '401': 'Unauthorized (401)',
+            '403': 'Not Allowed (403)',
+            '404': 'Page Not Found (404)',
+            '500': 'Error (500) - Please check your application error logs.',
+        };
+
+        if (Object.keys(errors).includes(String(xhr.status))) {
 
             // Close all modals.
             $('.modal').modal('hide');
 
-            bootbox.alert('Unauthorized (401)');
+            bootbox.alert(errors[xhr.status]);
 
-            // If we're in the admin redirect to admin login.
-            if (window.location.pathname.startsWith('/admin')) {
-                window.location = APPLICATION_URL + '/admin/login';
-            } else {
-                window.location = APPLICATION_URL + '/login';
+            if (xhr.status === 401) {
+                // If we're in the admin redirect to admin login.
+                if (window.location.pathname.startsWith('/admin')) {
+                    window.location = APPLICATION_URL + '/admin/login';
+                } else {
+                    window.location = APPLICATION_URL + '/login';
+                }
             }
-        }
-
-        // We're not authorized.
-        if (xhr.status == '403') {
-
-            // Close all modals.
-            $('.modal').modal('hide');
-
-            bootbox.alert('Not Allowed (403)');
-        }
-
-        // We're lost.
-        if (xhr.status == '404') {
-
-            // Close all modals.
-            $('.modal').modal('hide');
-
-            bootbox.alert('Page Not Found (404)');
-        }
-
-        // Something terrible happened.
-        if (xhr.status == '500') {
-
-            // Close all modals.
-            $('.modal').modal('hide');
-
-            bootbox.alert('Error (500) - Please check your application error logs.');
         }
     });
 });
