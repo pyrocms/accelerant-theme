@@ -23,23 +23,29 @@
 
                 <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
 
-                <ul class="dropdown-menu results">
+                <div class="dropdown-menu results">
+                    <h6 class="dropdown-header">Navigation</h6>
                     {% for key, navigation in template.cp.navigation %}
-                        <li class="dropdown-item">
-                            <a {{ html_attributes(navigation.attributes) }}>
-                                <span class="title">{{ trans(navigation.title) }}</span>
-                            </a>
-                        </li>
+                        <a class="dropdown-item" {{ html_attributes(navigation.attributes) }}>
+                            <span class="title">{{ trans(navigation.title) }}</span>
+                        </a>
                     {% endfor %}
-                </ul>
+                    <h6 class="dropdown-header">Links</h6>
+                    <a href="/" target="_blank" class="dropdown-item">
+                        {{ trans('theme::control_panel.view_site') }}
+                    </a>
+                    <a href="/admin/logout" class="dropdown-item">
+                        {{ trans('theme::control_panel.logout') }}
+                    </a>
+                </div>
 
             </form>
 
             <ul class="nav navbar-nav navbar-left pull-right">
                 {#<li class="nav-item">#}
-                    {#<a href="#">#}
-                        {#{{ icon('search') }}#}
-                    {#</a>#}
+                {#<a href="#">#}
+                {#{{ icon('search') }}#}
+                {#</a>#}
                 {#</li>#}
                 <li class="nav-item dropdown">
                     <a href="javascript:void(0);" data-toggle="dropdown">

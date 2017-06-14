@@ -2,8 +2,8 @@ $(function () {
 
     var form = $('#search');
     var input = form.find('input');
-    var list = form.find('ul');
-    var items = list.find('li');
+    var list = form.find('.results');
+    var items = list.find('a');
     var selected = null;
 
     // Don't submit on return.
@@ -39,9 +39,9 @@ $(function () {
                  * If we have a selection then
                  * push to the next visible option.
                  */
-                if (selected.nextAll(':visible').length) {
+                if (selected.nextAll('a:visible').length) {
                     items.removeClass('active');
-                    selected = selected.nextAll(':visible').first();
+                    selected = selected.nextAll('a:visible').first();
                     selected.addClass('active');
                 }
             } else {
@@ -50,7 +50,7 @@ $(function () {
                  * Otherwise select the first
                  * visible option in the list.
                  */
-                selected = items.filter(':visible').first();
+                selected = items.filter('a:visible').first();
                 selected.addClass('active');
             }
         }
@@ -66,9 +66,9 @@ $(function () {
                  * If we have a selection then push
                  * to the previous visible option.
                  */
-                if (selected.prevAll(':visible').length) {
+                if (selected.prevAll('a:visible').length) {
                     items.removeClass('active');
-                    selected = selected.prevAll(':visible').first();
+                    selected = selected.prevAll('a:visible').first();
                     selected.addClass('active');
                 }
             } else {
@@ -77,7 +77,7 @@ $(function () {
                  * Otherwise select the last
                  * visible option in the list.
                  */
-                selected = items.filter(':visible').last();
+                selected = items.filter('a:visible').last();
                 selected.addClass('active');
             }
         }
@@ -106,7 +106,7 @@ $(function () {
                         return false;
                     }
 
-                    window.location = selected.find('a').attr('href');
+                    window.location = selected.attr('href');
 
                     modal.find('.modal-content').append('<div class="modal-loading"><div class="active large loader"></div></div>');
                 }
