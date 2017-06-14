@@ -143,18 +143,36 @@ $(function () {
         }
 
         var value = $(this).val();
+        var collect = 0;
 
         /**
          * Filter the list by the items to
          * show only those containing value.
          */
         items.each(function () {
-            if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
+
+            var $this = $(this);
+
+            $this.unmark();
+
+            $this.mark(value, {
+                className: 'text-warning',
+                element: 'span',
+                acrossElements: true,
+                done: function (count) {
+                    if (count) {
+                        collect++;
+                        $this.show();
+                    } else {
+                        $this.hide();
+                    }
+                },
+            });
         });
+
+        if (!collect) {
+            items.removeClass('active').show();
+        }
 
         /**
          * If we don't have a selected item
