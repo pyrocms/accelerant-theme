@@ -16,10 +16,15 @@ $(function () {
         form.addClass('open');
     });
 
-    // Close search
-    input.on('blur', function () {
+    // Close search if we click outside the dropdown
+    $(window).click(function() {
         form.removeClass('open');
     });
+
+    form.click(function(e){
+        e.stopPropagation();
+    });
+
 
     // Handle simple searching
     input.on('keydown', function (e) {
