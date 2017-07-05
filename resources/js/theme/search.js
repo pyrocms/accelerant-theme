@@ -17,11 +17,11 @@ $(function () {
     });
 
     // Close search.
-    $(window).click(function() {
+    $(window).click(function () {
         form.removeClass('open');
     });
 
-    form.click(function(e){
+    form.click(function (e) {
         e.stopPropagation();
     });
 
@@ -106,7 +106,15 @@ $(function () {
                         return false;
                     }
 
-                    window.location = selected.attr('href');
+                    /**
+                     * If control or the meta key is
+                     * being held open a new window.
+                     */
+                    if (e.ctrlKey || e.metaKey) {
+                        window.open(selected.attr('href'), "_blank");
+                    } else {
+                        window.location = selected.attr('href');
+                    }
 
                     modal.find('.modal-content').append('<div class="modal-loading"><div class="active large loader"></div></div>');
                 }
