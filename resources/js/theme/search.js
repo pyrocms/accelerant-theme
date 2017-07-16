@@ -116,6 +116,10 @@ $(function () {
                         window.location = selected.attr('href');
                     }
 
+                    input.val('');
+                    input.blur();
+                    form.removeClass('open');
+
                     modal.find('.modal-content').append('<div class="modal-loading"><div class="active large loader"></div></div>');
                 }
             }
