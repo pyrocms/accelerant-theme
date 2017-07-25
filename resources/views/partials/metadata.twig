@@ -49,9 +49,6 @@
 {{ asset_style("build.css", ["live"]) }}
 
 {% if locale().isRtl() %}
-
-    {{ template.set('rtl', true) }}
-
     {{ asset_add("styles.css", "pyrocms.theme.accelerant::scss/theme/rtl.scss") }}
 {% endif %}
 
