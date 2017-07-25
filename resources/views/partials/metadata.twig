@@ -48,8 +48,7 @@
 {{ asset_style("theme.css") }}
 {{ asset_style("build.css", ["live"]) }}
 
-{# @todo replace this with locale() helper #}
-{% if config('streams::locales.supported.' ~ config('app.locale') ~ '.direction') == 'rtl' %}
+{% if locale().isRtl() %}
 
     {{ template.set('rtl', true) }}
 
