@@ -49,12 +49,12 @@
 {{ asset_style("build.css", ["live"]) }}
 
 {# @todo replace this with locale() helper #}
-{#{% if config('streams::locales.supported.' ~ config('app.locale') ~ '.direction') == 'rtl' %}#}
+{% if config('streams::locales.supported.' ~ config('app.locale') ~ '.direction') == 'rtl' %}
 
-    {#{{ template.set('rtl', true) }}#}
+    {{ template.set('rtl', true) }}
 
-    {#{{ asset_add("styles.css", "pyrocms.theme.accelerant::scss/theme/rtl.scss") }}#}
-{#{% endif %}#}
+    {{ asset_add("styles.css", "pyrocms.theme.accelerant::scss/theme/rtl.scss") }}
+{% endif %}
 
 {{ constants() }}
 
