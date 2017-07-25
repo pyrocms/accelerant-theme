@@ -3,12 +3,10 @@
 <html>
 
 <head>
-    {% block metadata deferred %}
     {% include "theme::partials/metadata" %}
-    {% endblock %}
 </head>
 
-<body class="variant-{{ random(8) }}" data-variants="8">
+<body class="variant-{{ random(8) }}{{ template.rtl ? ' rtl' }}" data-variants="8">
 
 {#{% include "theme::partials/push" %}#}
 {#{% include "theme::partials/brand" %}#}
