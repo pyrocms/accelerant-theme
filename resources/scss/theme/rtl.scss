@@ -1,12 +1,26 @@
+// bootstrap mixins
+@import "../bootstrap/mixins";
+
 // Utilities
 @import "_mixins";
 @import "_variables";
 
 // Layout
-//@import "layout/main";
+@import "layout/main.rtl";
+@import "layout/topbar.rtl";
+@import "layout/sidebar.rtl";
+@import "layout/menu.rtl";
+@import "layout/footer.rtl";
 
 // Components
 @import "components/scaffolding.rtl";
+@import "components/modals.rtl";
+@import "components/forms.rtl";
+@import "components/trees.rtl";
+@import "components/buttons.rtl";
+@import "components/tags.rtl";
+
+
 
 // Pages
 //@import "pages/login";
