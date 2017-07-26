@@ -1,4 +1,4 @@
-// bootstrap mixins
+// Bootstrap mixins
 @import "../bootstrap/mixins";
 
 // Utilities
@@ -20,7 +20,5 @@
 @import "components/buttons.rtl";
 @import "components/tags.rtl";
 
-
-
 // Pages
-//@import "pages/login";
+@import "pages/login.rtl";
