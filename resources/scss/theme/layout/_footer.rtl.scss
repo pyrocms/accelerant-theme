@@ -1,13 +1,16 @@
 #footer {
     direction: rtl;
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 240px;
 
     ul {
-        
+
+        &.extra {
+            float: left;
+        }
 
         li {
-            
+
             &:not(:last-child) {
                 margin-right: 0;
                 margin-left: 0.75em;
@@ -19,7 +22,7 @@
             }
         }
 
-        li.footprint{
+        li.footprint {
             direction: ltr;
         }
     }

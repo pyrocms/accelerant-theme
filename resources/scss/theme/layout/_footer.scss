@@ -10,8 +10,12 @@
         list-style: none;
         display: inline-block;
 
-        &:first-of-type {
+        &.meta {
             margin-top: 8px;
+        }
+
+        &.extra {
+            float: right;
         }
 
         li {
@@ -49,7 +53,7 @@
         ul {
             display: block;
 
-            &.pull-right {
+            &.extra {
                 margin-top: $spacer-y;
                 float: none !important;
 

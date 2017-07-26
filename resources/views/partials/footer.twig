@@ -1,6 +1,6 @@
 <section id="footer">
 
-    <ul>
+    <ul class="meta">
         <li class="copyright">
             &copy; {{ 'now'|date('Y') }} PyroCMS, Inc
         </li>
@@ -12,7 +12,7 @@
         </li>
     </ul>
 
-    <ul class="pull-right">
+    <ul class="extra">
         <li class="language">
             <select class="custom-select" onchange="window.location = '?_locale=' + this.value;">
                 {% for iso in config('streams::locales.supported')|keys %}
