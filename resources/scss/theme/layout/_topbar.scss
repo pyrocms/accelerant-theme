@@ -48,17 +48,22 @@
         }
     }
 
-    .button-menu-mobile {
-        border: none;
-        color: #888888;
-        cursor: pointer;
-        font-size: 21px;
-        padding: 0 15px;
-        line-height: 70px;
-        background: transparent;
+    .button-menu {
+        float: left;
+
+        .button-menu-mobile {
+            border: none;
+            color: #888888;
+            cursor: pointer;
+            font-size: 21px;
+            padding: 0 15px;
+            line-height: 70px;
+            background: transparent;
+        }
     }
 
     .navbar-form {
+        float: left;
         border: none;
         box-shadow: none;
 
@@ -79,6 +84,10 @@
         border-radius: 0;
         margin-bottom: 0;
         background-color: #ffffff;
+
+        .navbar-nav {
+            float: right;
+        }
     }
 
     .nav {

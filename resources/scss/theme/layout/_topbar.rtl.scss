@@ -1,9 +1,24 @@
 #topbar {
+
     .topbar-left {
         float: right;
     }
-    
-    .dropdown-menu .dropdown-item i{
+
+    .button-menu {
+        float: right;
+    }
+
+    .navbar-form {
+        float: right;
+    }
+
+    .navbar-default {
+        .navbar-nav {
+            float: left;
+        }
+    }
+
+    .dropdown-menu .dropdown-item i {
         margin-top: 6px;
         float: right;
         margin-right: 0;
