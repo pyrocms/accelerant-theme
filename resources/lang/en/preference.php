@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'sidebar_hover' => [
+        'name'         => 'Sidebar Hover',
+        'instructions' => 'Expand the sidebar on hover?',
+    ],
     'navigation' => [
         'name'         => 'Navigation',
         'instructions' => 'Specify your <em>personal</em> order of navigation.',
