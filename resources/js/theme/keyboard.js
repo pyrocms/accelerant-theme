@@ -15,7 +15,7 @@ $(function () {
 
             if (time - last <= delta) {
 
-                $('body').toggleClass('expand');
+                $('#sidebar').toggleClass('open');
 
                 time = 0;
             }

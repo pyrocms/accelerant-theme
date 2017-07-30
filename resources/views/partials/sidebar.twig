@@ -1,4 +1,4 @@
-<aside id="sidebar" class="scrollbar">
+<aside id="sidebar" class="scrollbar {{ setting_value('pyrocms.theme.accelerant::sidebar_hover') ? 'hover' }}">
 
     <ul>
         {% for key, navigation in template.cp.navigation %}

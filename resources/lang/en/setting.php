@@ -1,7 +1,11 @@
 <?php
 
 return [
-    'navigation' => [
+    'sidebar_hover' => [
+        'name'         => 'Sidebar Hover',
+        'instructions' => 'Expand the sidebar on hover?',
+    ],
+    'navigation'    => [
         'name'         => 'Navigation',
         'instructions' => 'Specify the <em>default</em> order of navigation.',
         'warning'      => 'The first accessible navigation item is used as the <strong>home</strong> area.',

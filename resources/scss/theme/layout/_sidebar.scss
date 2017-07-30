@@ -99,10 +99,9 @@
             }
         }
     }
-}
 
-body.expand {
-    #sidebar {
+    &.open,
+    &.hover:hover {
         width: 240px !important;
 
         a {
@@ -129,8 +128,9 @@ body.expand {
 }
 
 @include media-breakpoint-down(sm) {
-    body.expand {
-        #sidebar {
+    #sidebar {
+        &.open,
+        &.hover:hover {
             width: 50% !important;
         }
     }
