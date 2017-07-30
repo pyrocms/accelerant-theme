@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-// Bootstrap base styles
-@import "../bootstrap/bootstrap";
+// Bootstrap
+@import "../bootstrap/mixins";
+@import "../bootstrap/variables";
 
 // Utilities
 @import "_mixins";
