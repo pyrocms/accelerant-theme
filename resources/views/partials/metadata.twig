@@ -30,8 +30,4 @@
 
 {{ constants() }}
 
-{% for style in asset_styles("styles.css") %}
-    {{ style|raw }}
-{% endfor %}
-
 {{ asset_script("theme.js") }}
