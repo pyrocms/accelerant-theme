@@ -82,10 +82,12 @@ $(document).on('ready', function () {
         var checkTableFixed = function () {
             if ($responsiveTable.outerWidth() < $table.outerWidth() || window.innerWidth < 992 || isAtTop()) {
                 $thead.css({position: 'relative', top: '0px'});
+                $thead.css({zIndex: '1010'});
                 $table.css({marginTop: '0'});
             } else {
                 $thead.css({position: 'fixed', top: topBarHeight + 'px'});
                 $table.css({marginTop: $thead.height() + 'px'});
+                $thead.css({zIndex: '1010'});
             }
         };
 
