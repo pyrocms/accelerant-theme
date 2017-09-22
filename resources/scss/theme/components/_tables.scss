@@ -45,6 +45,10 @@
     }
 }
 
+.table-responsive {
+    overflow-x: visible;
+}
+
 .table-filters {
     padding: 1rem;
     border-top: 1px solid $table-border-color;
