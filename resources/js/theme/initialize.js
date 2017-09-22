@@ -17,7 +17,7 @@ $(document).on('ready', function () {
     $('.scrollbar').perfectScrollbar();
 
     // Flush the footer to the bottom.
-    $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight());
+    $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight() - 24);
 
     var $window = $(window);
 

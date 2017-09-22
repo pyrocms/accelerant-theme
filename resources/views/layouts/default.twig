@@ -31,10 +31,12 @@
         {% block content %}{% endblock %}
 
     </main>
+
+    {% include "theme::partials/footer" %}
+    {% include "theme::partials/modals" %}
+
 </section>
 
-{% include "theme::partials/footer" %}
-{% include "theme::partials/modals" %}
 {% include "theme::partials/assets" %}
 
 </body>
