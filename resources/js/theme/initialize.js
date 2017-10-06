@@ -134,8 +134,6 @@ $(document).on('ready', function () {
             }
         };
 
-        // Fixed controls
-        // checkControlsFixed();
         $window.on('resize', checkControlsFixed);
         $window.on('scroll', checkControlsFixed);
 
