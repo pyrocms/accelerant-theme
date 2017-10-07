@@ -20,12 +20,10 @@ $(document).on('ready', function () {
     $('#main').css('min-height', $(window).height() - $('#brand').outerHeight() - $('#footer').outerHeight() - 24);
 
     var $window = $(window);
-
     var $table = $('table.table:not(.no-affix)');
     var $responsiveTable = $table.closest('.table-responsive');
 
     if ($table.length === 1) {
-
         var $topBar = $('#topbar');
         var $thead = $table.find('thead');
         var topBarHeight = $topBar.height();
@@ -105,7 +103,6 @@ $(document).on('ready', function () {
     var $form = $('form.form:not(.no-affix)');
 
     if ($form.length === 1) {
-
         var $controls = $form.find('> .controls').first();
         var controlsHeight = $controls.height();
 
@@ -122,8 +119,7 @@ $(document).on('ready', function () {
         };
 
         var isAtBottom = function () {
-
-            var scrollTop = $('body').scrollTop();
+            var scrollTop = $('body').scrollTop() || $('html').scrollTop();
             var windowHeight = window.innerHeight;
             var documentHeight = document.body.scrollHeight;
 
@@ -138,9 +134,11 @@ $(document).on('ready', function () {
             }
         };
 
-        // Fixed controls
-        checkControlsFixed();
         $window.on('resize', checkControlsFixed);
         $window.on('scroll', checkControlsFixed);
+
+        setTimeout(function () {
+            $window.trigger('resize');
+        }, 10);
     }
 });
