@@ -3,7 +3,7 @@ $(function () {
     /**
      * Allow reordering the navigation.
      */
-    $('#sidebar > ul').sortable({
+    $('#sidebar').find('> ul').sortable({
         nested: false,
         placeholder: '<li class="placeholder"/>',
         afterMove: function ($placeholder) {
@@ -11,18 +11,13 @@ $(function () {
         },
         onDrop: function ($item, container, _super) {
 
-            var navigation = [];
+            let navigation = [];
 
-            $('#sidebar > ul > li').each(function () {
+            $('#sidebar').find('> ul > li').each(function () {
                 navigation.push(String($(this).data('slug')));
             });
 
-            $.post(
-                REQUEST_ROOT_PATH + '/admin/settings/themes/pyrocms.theme.accelerant/navigation',
-                {
-                    'navigation': navigation
-                }
-            );
+            $('#navigation-order').val(JSON.stringify(navigation));
 
             _super($item, container);
         }

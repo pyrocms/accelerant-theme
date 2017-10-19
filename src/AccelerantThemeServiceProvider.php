@@ -29,16 +29,6 @@ class AccelerantThemeServiceProvider extends AddonServiceProvider
     ];
 
     /**
-     * The addon routes.
-     *
-     * @var array
-     */
-    protected $routes = [
-        'admin/settings/themes/pyrocms.theme.accelerant/navigation'    => SettingsController::class . '@navigation',
-        'admin/preferences/themes/pyrocms.theme.accelerant/navigation' => PreferencesController::class . '@navigation',
-    ];
-
-    /**
      * Register the addon.
      */
     public function register()

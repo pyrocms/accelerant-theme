@@ -17,12 +17,7 @@ $(function () {
                 navigation.push(String($(this).data('slug')));
             });
 
-            $.post(
-                REQUEST_ROOT_PATH + '/admin/preferences/themes/pyrocms.theme.accelerant/navigation',
-                {
-                    'navigation': navigation
-                }
-            );
+            $('#navigation-order').val(JSON.stringify(navigation));
 
             _super($item, container);
         }

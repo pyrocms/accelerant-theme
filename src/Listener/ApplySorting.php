@@ -51,11 +51,11 @@ class ApplySorting
         $navigation = $builder->getNavigation();
 
         if ($settings = $this->settings->value('pyrocms.theme.accelerant::navigation')) {
-            $navigation = array_merge(array_flip(unserialize($settings)), $navigation);
+            $navigation = array_merge(array_flip((array)json_decode($settings)), $navigation);
         }
 
         if ($preferences = $this->preferences->value('pyrocms.theme.accelerant::navigation')) {
-            $navigation = array_merge(array_flip(unserialize($preferences)), $navigation);
+            $navigation = array_merge(array_flip((array)json_decode($preferences)), $navigation);
         }
 
         /**
