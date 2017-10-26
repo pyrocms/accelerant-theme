@@ -43,6 +43,12 @@
             color: $link-color;
         }
     }
+
+    tfoot {
+        .pagination {
+            margin-left: 1rem;
+        }
+    }
 }
 
 .table-filters {
@@ -52,6 +58,14 @@
     .form-group {
         margin-bottom: 0 !important;
     }
+}
+
+.table-limit {
+    height: auto;
+    font-size: 75%;
+    vertical-align: top;
+    padding-top: 0.22rem !important;
+    padding-bottom: 0.21rem !important;
 }
 
 .no-results {
