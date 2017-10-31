@@ -103,6 +103,7 @@ $(document).on('ready', function () {
     var $form = $('form.form:not(.no-affix)');
 
     if ($form.length === 1) {
+
         var $controls = $form.find('> .controls').first();
         var controlsHeight = $controls.height();
 
@@ -122,7 +123,7 @@ $(document).on('ready', function () {
             var scrollTop = $('body').scrollTop() || $('html').scrollTop();
             var windowHeight = window.innerHeight;
             var documentHeight = document.body.scrollHeight;
-
+            
             return scrollTop + windowHeight - documentHeight + controlsHeight + 30 > 0;
         };
 
@@ -137,8 +138,12 @@ $(document).on('ready', function () {
         $window.on('resize', checkControlsFixed);
         $window.on('scroll', checkControlsFixed);
 
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+            checkControlsFixed();
+        });
+
         setTimeout(function () {
             $window.trigger('resize');
-        }, 10);
+        }, 20);
     }
 });
