@@ -1,6 +1,7 @@
-{% import _self as menu %}
+{% macro sections(sections, section) %}
 
-{% macro section(sections, section) %}
+    {% import _self as self %}
+
     <li class="{{ section.highlighted ? 'highlighted' }} {{ section.active ? 'active' }} {{ section.class }}">
 
         <a {{ html_attributes(section.attributes) }}>
@@ -17,7 +18,7 @@
         {% if section.highlighted %}
             <ul>
                 {% for child in sections.children(section.slug).visible() %}
-                    {{ _self.section(sections, child) }}
+                    {{ self.sections(sections, child) }}
                 {% endfor %}
             </ul>
         {% endif %}
