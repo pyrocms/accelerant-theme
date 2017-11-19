@@ -1,6 +1,10 @@
 .table {
     margin-bottom: 0;
-
+    
+    thead {
+        z-index: 1;
+    }
+    
     th,
     td {
         vertical-align: middle;
