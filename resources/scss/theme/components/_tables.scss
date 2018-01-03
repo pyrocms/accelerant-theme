@@ -32,6 +32,10 @@
             > td {
                 vertical-align: middle;
 
+                p {
+                    margin-bottom: 0;
+                }
+
                 .handle:hover {
                     cursor: move;
                 }
