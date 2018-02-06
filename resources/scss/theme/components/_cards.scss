@@ -26,8 +26,8 @@
         color: darken($gray-light, 15%);
 
         small {
+            display: block;
             color: $gray-light;
-            display: inline-block;
         }
     }
 }
