@@ -20,6 +20,7 @@
                         text: event.target.dataset.cancel_text || 'Cancel'
                     },
                     confirm: {
+                        closeModal: event.target.dataset.close == undefined ? true : (event.target.dataset.close == 'true'),
                         text: event.target.dataset.confirm_text || 'OK'
                     },
                 }
