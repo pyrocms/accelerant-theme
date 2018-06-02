@@ -3,6 +3,18 @@
     {
         font-size:$fontsize;
     }
+    h1,h2
+    {
+        font-size:24px;
+    }
+    h3
+    {
+        font-size:20px;
+    }
+    h4,h5,h6
+    {
+        font-size:16px;
+    }
     .card-block
     {
         padding:0.5rem 1.25rem;
@@ -46,4 +58,28 @@
 body.layout--tight
 {
     @include tightcontent(14px);
+}
+
+body.sidebars--static
+{
+    #sidebar {
+        width: 240px !important;
+        ul li a 
+        {
+            display:flex;
+            padding-left:10px;
+        }
+        ul li a .title 
+        {
+            display:block;
+        }
+    }
+    #menu 
+    {
+        left:240px;
+    }
+    #main 
+    {
+        margin-left:410px;
+    }
 }
