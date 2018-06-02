@@ -12,11 +12,14 @@
         margin-bottom:1rem;
         padding-bottom:1rem;
     }
+    
     .control-label+.text-muted
     {
         position:relative;
         top: -.5rem;
         margin-bottom: .3rem;
+        font-size:13px;
+        font-style:italic;
     }
     #main #buttons,.card
     {
