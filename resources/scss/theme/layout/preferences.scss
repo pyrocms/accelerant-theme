@@ -62,24 +62,27 @@ body.layout--tight
 
 body.sidebars--static
 {
-    #sidebar {
-        width: 240px !important;
-        ul li a 
-        {
-            display:flex;
-            padding-left:10px;
+    @media (min-width: 992px) {
+        #sidebar {
+            width: 240px !important;
+            ul li a 
+            {
+                display:flex;
+                padding-left:10px;
+            }
+            ul li a .title 
+            {
+                display:block;
+            }
         }
-        ul li a .title 
+        #menu 
         {
-            display:block;
+            left:240px;
         }
-    }
-    #menu 
-    {
-        left:240px;
-    }
-    #main 
-    {
-        margin-left:410px;
+        #main 
+        {
+            margin-left:410px;
+        }
+        
     }
 }
