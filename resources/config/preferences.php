@@ -6,4 +6,15 @@ return [
         'type'       => 'anomaly.field_type.textarea',
         'input_view' => 'pyrocms.theme.accelerant::admin/navigation/preferences',
     ],
+    'layout'        => [
+        'type'   => 'anomaly.field_type.select',
+        'config' => [
+            'options'       => [
+                'regular'         => 'Regular',
+                'tight'           => 'Tighter',
+            ],
+            'default_value' => 'regular',
+            'mode'          => 'dropdown',
+        ],
+    ],
 ];

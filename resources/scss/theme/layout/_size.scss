@@ -1,0 +1,46 @@
+@mixin tightcontent($fontsize) {
+    *
+    {
+        font-size:$fontsize;
+    }
+    .card-block
+    {
+        padding:0.5rem 1.25rem;
+    }
+    .form .field-group
+    {
+        margin-bottom:1rem;
+        padding-bottom:1rem;
+    }
+    .control-label+.text-muted
+    {
+        position:relative;
+        top: -.5rem;
+        margin-bottom: .3rem;
+    }
+    #main #buttons,.card
+    {
+        margin-bottom:1rem;
+    }
+    #menu,#sidebar
+    {
+        ul li:first-child 
+        {
+            margin-top:7px;
+        }
+        ul li a 
+        {
+            font-size:15px;
+            margin-top:0;
+            margin-bottom:0;
+            line-height:1.5;
+            padding-top:5px;                                                    
+            padding-bottom:5px;
+        }
+    }
+}
+
+body.layout--tight
+{
+    @include tightcontent(14px);
+}

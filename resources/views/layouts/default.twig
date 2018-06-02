@@ -6,7 +6,7 @@
     {% include "theme::partials/metadata" %}
 </head>
 
-<body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }}" data-variants="8">
+<body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }} layout--{{ preference_value('pyrocms.theme.accelerant::layout') ? preference_value('pyrocms.theme.accelerant::layout'):'regular' }}" data-variants="8">
 
 {#{% include "theme::partials/push" %}#}
 {#{% include "theme::partials/brand" %}#}
