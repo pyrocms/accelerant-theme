@@ -1,5 +1,6 @@
 @mixin tightcontent($fontsize) {
-    *
+    @media (min-width: 992px) {
+        *
     {
         font-size:$fontsize;
     }
@@ -24,14 +25,25 @@
         margin-bottom:1rem;
         padding-bottom:1rem;
     }
+    hr 
+    {
+        margin-bottom:.5rem;
+        margin-top:.5rem;
+    }
     
-    .control-label+.text-muted
+    .control-label+.text-muted,
+    .control-label+.text-muted+.help-block
     {
         position:relative;
         top: -.5rem;
         margin-bottom: .3rem;
         font-size:13px;
         font-style:italic;
+    }
+    .control-label+.text-muted+.help-block .text-warning
+    {
+        font-size:13px;
+        font-style:normal;
     }
     #main #buttons,.card
     {
@@ -52,6 +64,8 @@
             padding-top:5px;                                                    
             padding-bottom:5px;
         }
+    }
+        
     }
 }
 
