@@ -1,44 +1,34 @@
-@mixin tightcontent($fontsize)
-{
-    @media (min-width: 992px)
-    {
-        *
-        {
+@mixin compact_display($fontsize) {
+    @media (min-width: 992px) {
+        * {
             font-size: $fontsize;
         }
         h1,
-        h2
-        {
+        h2 {
             font-size: 24px;
         }
-        h3
-        {
+        h3 {
             font-size: 20px;
         }
         h4,
         h5,
-        h6
-        {
+        h6 {
             font-size: 16px;
         }
-        .card-block
-        {
+        .card-block {
             padding: .5rem 1.25rem;
         }
-        .form .field-group
-        {
+        .form .field-group {
             margin-bottom: 1rem;
             padding-bottom: 1rem;
         }
-        hr
-        {
+        hr {
             margin-top: .5rem;
             margin-bottom: .5rem;
         }
 
         .control-label + .text-muted,
-        .control-label + .text-muted + .help-block
-        {
+        .control-label + .text-muted + .help-block {
             font-size: 13px;
             font-style: italic;
 
@@ -47,25 +37,20 @@
 
             margin-bottom: .3rem;
         }
-        .control-label + .text-muted + .help-block .text-warning
-        {
+        .control-label + .text-muted + .help-block .text-warning {
             font-size: 13px;
             font-style: normal;
         }
         #main #buttons,
-        .card
-        {
+        .card {
             margin-bottom: 1rem;
         }
         #menu,
-        #sidebar
-        {
-            ul li:first-child
-            {
+        #sidebar {
+            ul li:first-child {
                 margin-top: 7px;
             }
-            ul li a
-            {
+            ul li a {
                 font-size: 15px;
                 line-height: 1.5;
 
@@ -75,42 +60,39 @@
                 padding-bottom: 5px;
             }
         }
-        label.switch__label
-        {
-            margin-bottom:0;
+        label.switch__label {
+            margin-bottom: 0;
         }
     }
 }
 
-body.layout--tight
-{
-    @include tightcontent(14px);
+body.display--compact {
+    @include compact_display(14px);
 }
 
-body.sidebars--static
-{
-    @media (min-width: 992px)
-    {
-        #sidebar
-        {
+body.sidebars--static {
+    @media (min-width: 992px) {
+        #sidebar {
             width: 240px !important;
-            ul li a
-            {
+            ul li a {
                 display: flex;
 
                 padding-left: 10px;
             }
-            ul li a .title
-            {
+            ul li a .title {
                 display: block;
             }
         }
-        #menu
-        {
+
+        #menu {
             left: 240px;
         }
-        #main
-        {
+
+        #main {
+            margin-left: 410px;
+        }
+
+        #footer {
             margin-left: 410px;
         }
     }

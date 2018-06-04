@@ -6,25 +6,27 @@ return [
         'type'       => 'anomaly.field_type.textarea',
         'input_view' => 'pyrocms.theme.accelerant::admin/navigation/preferences',
     ],
-    'layout'        => [
-        'type'   => 'anomaly.field_type.select',
-        'config' => [
-            'options'       => [
-                'regular'         => 'Regular',
-                'tight'           => 'Tighter',
-            ],
-            'default_value' => 'regular',
+    'display'       => [
+        'required' => true,
+        'type'     => 'anomaly.field_type.select',
+        'config'   => [
+            'default_value' => 'default',
             'mode'          => 'dropdown',
+            'options'       => [
+                'default' => 'pyrocms.theme.accelerant::preference.display.option.default',
+                'compact' => 'pyrocms.theme.accelerant::preference.display.option.compact',
+            ],
         ],
     ],
-    'sidebars'        => [
-        'type'   => 'anomaly.field_type.select',
-        'config' => [
+    'sidebars'      => [
+        'required' => true,
+        'type'     => 'anomaly.field_type.select',
+        'config'   => [
             'options'       => [
-                'regular'        => 'Regular',
-                'static'         => 'Static Sidebars',
+                'default' => 'pyrocms.theme.accelerant::preference.sidebars.option.default',
+                'static'  => 'pyrocms.theme.accelerant::preference.sidebars.option.static',
             ],
-            'default_value' => 'regular',
+            'default_value' => 'default',
             'mode'          => 'dropdown',
         ],
     ],
