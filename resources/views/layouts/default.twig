@@ -2,42 +2,42 @@
 
 <html>
 
-<head>
-    {% include "theme::partials/metadata" %}
-</head>
+    <head>
+        {% include "theme::partials/metadata" %}
+    </head>
 
-<body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }}" data-variants="8">
+    <body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }} layout--{{ preference_value('pyrocms.theme.accelerant::layout') ? preference_value('pyrocms.theme.accelerant::layout'):'regular' }} sidebars--{{ preference_value('pyrocms.theme.accelerant::sidebars') ? preference_value('pyrocms.theme.accelerant::sidebars'):'regular' }}" data-variants="8">
 
-{#{% include "theme::partials/push" %}#}
-{#{% include "theme::partials/brand" %}#}
-{#{% include "theme::partials/navbar" %}#}
-{#{% include "theme::partials/header" %}#}
+        {#{% include "theme::partials/push" %}#}
+        {#{% include "theme::partials/brand" %}#}
+        {#{% include "theme::partials/navbar" %}#}
+        {#{% include "theme::partials/header" %}#}
 
-<section id="app">
+        <section id="app">
 
-    {% include "theme::partials/topbar" %}
-    {% include "theme::partials/sidebar" %}
-    {% include "theme::partials/menu" %}
+            {% include "theme::partials/topbar" %}
+            {% include "theme::partials/sidebar" %}
+            {% include "theme::partials/menu" %}
 
-    <main id="main" style="min-height: 1500px;">
+            <main id="main" style="min-height: 1500px;">
 
-        {{ breadcrumb() }}
+                {{ breadcrumb() }}
 
-        <div class="container-fluid">
-            {% include "theme::partials/messages" %}
-            {% include "theme::partials/buttons" %}
-        </div>
+                <div class="container-fluid">
+                    {% include "theme::partials/messages" %}
+                    {% include "theme::partials/buttons" %}
+                </div>
 
-        {% block content %}{% endblock %}
+                {% block content %}{% endblock %}
 
-    </main>
+            </main>
 
-    {% include "theme::partials/footer" %}
-    {% include "theme::partials/modals" %}
+            {% include "theme::partials/footer" %}
+            {% include "theme::partials/modals" %}
 
-</section>
+        </section>
 
-{% include "theme::partials/assets" %}
+        {% include "theme::partials/assets" %}
 
-</body>
+    </body>
 </html>
