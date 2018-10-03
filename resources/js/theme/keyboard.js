@@ -9,6 +9,13 @@ $(function () {
 
     $(document).keydown(function (e) {
 
+        /**
+         * Prevent Oddballs
+         */
+        if (e.which == 0) {
+            return;
+        }
+
         if (e.which == 17 || e.which == 91) {
 
             var time = new Date();
@@ -29,6 +36,13 @@ $(function () {
      * for following module sections.
      */
     $(document).keydown(function (e) {
+
+        /**
+         * Prevent Oddballs
+         */
+        if (e.which == 0) {
+            return;
+        }
 
         // If not pressed CTRL||META - we do not calculate anything,
         if (!(e.ctrlKey || e.metaKey)) {
@@ -71,6 +85,13 @@ $(function () {
      */
     $(document).keydown(function (e) {
 
+        /**
+         * Prevent Oddballs
+         */
+        if (e.which == 0) {
+            return;
+        }
+
         // If not pressed CTRL||META - we do not calculate anything,
         if (!(e.ctrlKey || e.metaKey)) {
             return;
@@ -111,6 +132,13 @@ $(function () {
      * jumping to the global search input.
      */
     $(document).keydown(function (e) {
+
+        /**
+         * Prevent Oddballs
+         */
+        if (e.which == 0) {
+            return;
+        }
 
         var space = e.which == 0 || e.which == 32; // 0 works in Mozilla and 320 in others
 
