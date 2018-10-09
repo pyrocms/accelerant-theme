@@ -1,8 +1,14 @@
-@mixin compact_display($fontsize) {
-    @media (min-width: 992px) {
-        * {
-            font-size: $fontsize;
+body.display--compact {
+    font-size: 14px;
+    &.expand {
+        #topbar {
+            .topbar-left {
+                width: 220px !important;
+            }
         }
+    }
+    
+    @media (min-width: 992px) {
         h1,
         h2 {
             font-size: 24px;
@@ -41,6 +47,11 @@
             font-size: 13px;
             font-style: normal;
         }
+        #topbar {
+            .topbar-left {
+                width: 50px;
+            }
+        }
         #main #buttons,
         .card {
             margin-bottom: 1rem;
@@ -60,14 +71,37 @@
                 padding-bottom: 5px;
             }
         }
+        #sidebar {
+            width: 50px;
+            &.open,
+            &.hover:hover {
+                width: 220px !important;
+                a {
+                    padding-left: 15px;
+                }
+            }
+        }
+        #menu {
+            left: 50px;
+        }
+        #main {
+            margin-left: 220px;
+        }
         label.switch__label {
             margin-bottom: 0;
         }
+        .table {
+            td {
+                padding: 0.3rem 0.75rem;
+            }
+        }
+        .form-control {
+            font-size: 0.9rem;
+        }
+        .custom-select, select.form-control:not([size]):not([multiple]) {
+            height: calc(2.3rem - 2px);
+        }
     }
-}
-
-body.display--compact {
-    @include compact_display(14px);
 }
 
 body.sidebars--static {
