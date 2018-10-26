@@ -33,6 +33,16 @@
     }
 }
 
+.card-deck {
+    margin-left: 0;
+    margin-right: 0;
+
+    .card {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}
+
 @include media-breakpoint-down(sm) {
     .card-block {
         padding: .5em;
