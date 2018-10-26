@@ -3,6 +3,10 @@
     margin-bottom: $card-spacer-y*2;
     @include shadow();
 
+    &.card-disabled {
+        opacity: 0.5;
+    }
+
     &.card-container {
         box-shadow: none;
         background: transparent;
