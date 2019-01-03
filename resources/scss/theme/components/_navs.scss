@@ -37,6 +37,17 @@
                 }
             }
         }
+
+        &.nav-alt {
+            li {
+                &.active {
+                    a {
+                        color: $gray;
+                        background: #f7f7f7;
+                    }
+                }
+            }
+        }
     }
 
     &.nav-pills {
@@ -58,4 +69,8 @@
 
 .tab-pane:not(.active) {
     display: none;
+}
+
+.tab-pane.tab-alt {
+    background: #f7f7f7;
 }
