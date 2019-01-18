@@ -1,5 +1,5 @@
 <style type="text/css">
-    {% for style in asset_inlines("styles.css", ["min"]) %}
+    {% for style in asset_inlines("styles.css") %}
     {{ style|raw }}
     {% endfor %}
 </style>
