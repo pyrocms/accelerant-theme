@@ -1,5 +1,5 @@
 <style type="text/css">
-    {% for style in asset_inlines("styles.css", ["min"]) %}
+    {% for style in asset_inlines("styles.css") %}
     {{ style|raw }}
     {% endfor %}
 </style>
@@ -7,7 +7,7 @@
 {{ template.includes.render('cp_scripts')|raw }}
 
 <script type="text/javascript">
-    {% for script in asset_inlines("scripts.js", ["min"]) %}
+    {% for script in asset_inlines("scripts.js") %}
     {{ script|raw }}
     {% endfor %}
 </script>
