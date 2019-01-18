@@ -7,7 +7,7 @@
 {{ template.includes.render('cp_scripts')|raw }}
 
 <script type="text/javascript">
-    {% for script in asset_inlines("scripts.js", ["min"]) %}
+    {% for script in asset_inlines("scripts.js") %}
     {{ script|raw }}
     {% endfor %}
 </script>
