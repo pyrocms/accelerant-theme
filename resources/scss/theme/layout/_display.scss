@@ -63,6 +63,10 @@
             font-style: normal;
         }
 
+        .form-control {
+            font-size: 0.9rem;
+        }
+
         #main #buttons,
         .card
         {
@@ -89,6 +93,12 @@
             }
         }
 
+        // Haven't been able to verify this, but it looks specific enough
+        // to trust
+        .custom-select, select.form-control:not([size]):not([multiple]) {
+            height: calc(2.3rem - 2px);
+        }
+
 
 
 
@@ -97,6 +107,10 @@
             margin-bottom: 0;
         }
 
+        table td 
+        {
+            padding:.4rem .75rem;
+        }
 
         /*
             --------------------------------------------------------------------
