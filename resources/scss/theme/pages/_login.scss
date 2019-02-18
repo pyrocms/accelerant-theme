@@ -134,7 +134,7 @@
                 background-size: cover;
                 background-position: top, center;
                 background-repeat: no-repeat, no-repeat;
-                background-image: url('{{ image_path("theme::img/bg.svg") }}');
+                background-image: url('{{ img("theme::img/bg.svg").path }}');
             }
 
             .logo {
