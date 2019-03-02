@@ -457,7 +457,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #888888;
+  color: #c8c8c8;
   text-align: left;
   caption-side: bottom;
 }
@@ -3233,7 +3233,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   margin-top: -0.25rem;
 }
 .form-check.disabled .form-check-label {
-  color: #888888;
+  color: #c8c8c8;
   cursor: not-allowed;
 }
 
@@ -3264,7 +3264,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   margin-left: 0.75rem;
 }
 .form-check-inline.disabled {
-  color: #888888;
+  color: #c8c8c8;
   cursor: not-allowed;
 }
 
@@ -7475,11 +7475,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .text-muted {
-  color: #888888 !important;
+  color: #c8c8c8 !important;
 }
 
 a.text-muted:focus, a.text-muted:hover {
-  color: #6f6f6f !important;
+  color: #aeaeae !important;
 }
 
 .text-primary {
