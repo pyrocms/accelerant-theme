@@ -42,27 +42,27 @@
             </form>
 
             <ul class="nav navbar-nav navbar-left">
-                {#{% for shortcut in template.cp.shortcuts %}#}
-                    {#<li class="nav-item #}{#dropdown#}{#">#}
-                        {#<a href="#" #}{#data-toggle="dropdown"#}{#>#}
-                            {#<span class="tag tag-danger">{{ icon(shortcut.icon) }} 2</span>#}
-                        {#</a>#}
-                        {#<ul class="dropdown-menu-right dropdown-menu">#}
-                            {#<li class="dropdown-item">#}
-                                {#<a href="/" target="_blank">#}
-                                    {#<i class="fa fa-external-link"></i>#}
-                                    {#{{ trans('theme::control_panel.view_site') }}#}
-                                {#</a>#}
-                            {#</li>#}
-                            {#<li class="dropdown-item">#}
-                                {#<a href="/admin/logout">#}
-                                    {#<i class="fa fa-power-off"></i>#}
-                                    {#{{ trans('theme::control_panel.logout') }}#}
-                                {#</a>#}
-                            {#</li>#}
-                        {#</ul>#}
-                    {#</li>#}
-                {#{% endfor %}#}
+                {% for shortcut in template.cp.shortcuts %}
+                    <li class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown">
+                            <span class="tag tag-danger">{{ icon(shortcut.icon) }} 2</span>
+                        </a>
+                        <ul class="dropdown-menu-right dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="/" target="_blank">
+                                    <i class="fa fa-external-link"></i>
+                                    {{ trans('theme::control_panel.view_site') }}
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="/admin/logout">
+                                    <i class="fa fa-power-off"></i>
+                                    {{ trans('theme::control_panel.logout') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                {% endfor %}
                 <li class="nav-item dropdown">
                     <a href="javascript:void(0);" data-toggle="dropdown">
                         <img src="{{ user().gravatar.path }}" width="36" class="rounded-circle">
