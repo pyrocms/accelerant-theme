@@ -7,16 +7,15 @@
 <title>{{ trans('pyrocms.theme.accelerant::control_panel.title') }}
     &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
 
-<!-- Favicons -->
+{# Favicons #}
 {{ favicons("pyrocms.theme.accelerant::img/favicon.png") }}
 
-{#{{ asset_add("theme.css", "pyrocms.theme.accelerant::scss/flat-ui/flat-ui.scss") }}#}
-{{ asset_add("theme.css", "pyrocms.theme.accelerant::scss/fonts/fonts.scss", ["parse"]) }}
-{{ asset_add("theme.css", "pyrocms.theme.accelerant::scss/bootstrap/bootstrap.scss") }}
+{{ asset_add("theme.css", "pyrocms.theme.accelerant::css/fonts.css", ["parse"]) }}
+{{ asset_add("theme.css", "pyrocms.theme.accelerant::css/bootstrap.css") }}
 
 {{ asset_add(
     "build.css",
-    "pyrocms.theme.accelerant::scss/theme/theme.scss",
+    "pyrocms.theme.accelerant::css/theme.css",
     [
         "required",
         "as:t4t5/sweetalert.css",
@@ -53,12 +52,14 @@
 {{ asset_add("scripts.js", "pyrocms.theme.accelerant::js/theme/push.js") }}
 {{ asset_add("scripts.js", "pyrocms.theme.accelerant::js/theme/search.js") }}
 
-{{ asset_style("theme.css") }}
-{{ asset_style("build.css", ["live"]) }}
+<style type="text/css">
+    {{ asset_inline("theme.css") }}
+    {{ asset_inline("build.css") }}
+</style>
 
 {% if locale().isRtl() %}
-    {{ asset_add("styles.css", "pyrocms.theme.accelerant::css/bootstrap-rtl/bootstrap.rtl.css") }}
-    {{ asset_add("styles.css", "pyrocms.theme.accelerant::scss/theme/rtl.scss") }}
+    {{ asset_inline("pyrocms.theme.accelerant::css/bootstrap.rtl.css") }}
+    {{ asset_inline("pyrocms.theme.accelerant::css/rtl.css") }}
 {% endif %}
 
 {{ constants() }}
