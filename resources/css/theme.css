@@ -274,6 +274,28 @@
   position: relative;
   color: #888888 !important;
 }
+#topbar .nav > li.shortcut {
+  padding: 0 7.5px;
+}
+#topbar .nav > li.shortcut > a {
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  line-height: 1;
+  margin-top: 18px;
+  text-align: center;
+  border-radius: 50px;
+  display: inline-block;
+}
+#topbar .nav > li.shortcut > a > i {
+  opacity: 0.5;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  transition: all 200ms;
+}
+#topbar .nav > li.shortcut > a:hover > i {
+  opacity: 1;
+}
 #topbar .dropdown-menu {
   margin: 0;
   z-index: 998;
