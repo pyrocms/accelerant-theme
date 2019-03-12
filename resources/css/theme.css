@@ -284,6 +284,7 @@
   line-height: 1;
   margin-top: 18px;
   text-align: center;
+  margin-bottom: 16px;
   border-radius: 50px;
   display: inline-block;
 }
@@ -1129,11 +1130,6 @@ ul.tree li.collapsed > ul {
 }
 .table thead th a {
   color: #373a3c;
-}
-.table tfoot tr:last-of-type:not(:first-of-type) th, .table tfoot tr:last-of-type:not(:first-of-type) td {
-  border-top: 0;
-  padding-top: 0;
-  margin-top: -5px;
 }
 .table tfoot .pagination {
   margin-left: 1rem;
