@@ -64,6 +64,96 @@
                         {#</ul>#}
                     </li>
                 {% endfor %}
+
+                {% if template.module.composer_json.support %}
+                <li class="nav-item shortcut dropdown">
+                    <a href="#" data-toggle="dropdown">
+                        {{ icon('fa fa-life-ring') }}
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-menu">
+                        <li class="dropdown-header">
+                            {{ trans(template.module.title) }} Support
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        {% for type, support in template.module.composer_json.support %}
+
+                            {% if type == 'email' %}
+                                <li class="dropdown-item">
+                                    <a href="#" onclick="return false;">
+                                        {{ support }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'issues' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.known_issues') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'forum' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.support_forum') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'slack' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.slack') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'irc' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.irc_channel') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'wiki' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.project_wiki') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'source' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.source_code') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'docs' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.documentation') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if type == 'rss' %}
+                                <li class="dropdown-item">
+                                    <a href="{{ support }}" target="_blank">
+                                        {{ trans('anomaly.module.addons::label.rss') }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+
+                </li>
+                {% endif %}
                 <li class="nav-item dropdown">
                     <a href="javascript:void(0);" data-toggle="dropdown">
                         <img src="{{ user().gravatar.path }}" width="36" class="rounded-circle">
