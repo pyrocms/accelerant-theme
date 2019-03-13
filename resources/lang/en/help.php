@@ -2,7 +2,7 @@
 
 return [
     'title'                     => 'Helpful Resources',
-    'description'               => 'Find help and discover features with these helpful features.',
+    'description'               => 'Find help and discover features with these helpful resources.',
     'documentation_link'        => 'PyroCMS Documentation',
     'documentation_description' => 'Find documentation for PyroCMS, developing addons, and using addons too.',
     'slack_link'                => 'Slack Team',
