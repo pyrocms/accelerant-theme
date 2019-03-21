@@ -1,20 +1,8 @@
 let initModal = function () {
 
-    let actions = $('button[data-toggle="modal"]');
-
     let modal = $('.modal.remote:not([data-initialized])');
 
     let loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
-
-    // Prevent actions from submitting.
-    actions.on('click', function(e) {
-
-        e.preventDefault();
-
-        $($(this).attr('data-target')).modal('show');
-
-        return false;
-    });
 
     // Loading state
     modal.on('loading', function() {
