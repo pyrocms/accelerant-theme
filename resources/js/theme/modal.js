@@ -56,6 +56,14 @@ let initModal = function () {
         }
     });
 
+    // Handle load indicators in modals.
+    modal.on('click', '[data-toggle="loader"]', function () {
+
+        let wrapper = $(this).closest('.modal-content');
+
+        wrapper.append(loading);
+    });
+
     // Mark as initialized.
     modal.attr('data-initialized', '');
 };
