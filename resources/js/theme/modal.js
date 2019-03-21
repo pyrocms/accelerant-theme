@@ -1,8 +1,20 @@
-var initModal = function () {
+let initModal = function () {
 
-    var modal = $('.modal.remote:not([data-initialized])');
+    let actions = $('button[data-toggle="modal"]');
 
-    var loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
+    let modal = $('.modal.remote:not([data-initialized])');
+
+    let loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
+
+    // Prevent actions from submitting.
+    actions.on('click', function(e) {
+
+        e.preventDefault();
+
+        $($(this).attr('data-target')).modal('show');
+
+        return false;
+    });
 
     // Loading state
     modal.on('loading', function() {
@@ -27,7 +39,7 @@ var initModal = function () {
 
         e.preventDefault();
 
-        var wrapper = $(this).closest('.modal-content');
+        let wrapper = $(this).closest('.modal-content');
 
         wrapper.append(loading);
 
@@ -41,7 +53,7 @@ var initModal = function () {
 
         e.preventDefault();
 
-        var wrapper = $(this).closest('.modal-content');
+        let wrapper = $(this).closest('.modal-content');
 
         wrapper.append(loading);
 
@@ -69,7 +81,7 @@ $(document).ajaxComplete(function () {
 });
 
 $(document).on('show.bs.modal', '.modal', function () {
-    var zIndex = 1040 + (10 * $('.modal:visible').length);
+    let zIndex = 1040 + (10 * $('.modal:visible').length);
     $(this).css('z-index', zIndex);
     setTimeout(function() {
         $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
