@@ -2,6 +2,10 @@
 
 {% block content %}
 
+    <script type="text/javascript">
+        {{ asset_inline('pyrocms.theme.accelerant::js/theme/login.js') }}
+    </script>
+
     <div class="logo-container">
         <div class="logo">
             {{ img('theme::img/icon.svg').data|raw }}
@@ -24,7 +28,7 @@
 
                 {% set form = form('login').redirect('admin').get() %}
 
-                {{ form.open|raw }}
+                {{ form.open({'id': 'login'})|raw }}
 
                 <div class="form-group">
                     {% if setting_value('anomaly.module.users::login') == 'username' %}
@@ -46,8 +50,7 @@
                 </div>
 
                 <div class="form-group pull-right">
-                    <button type="submit" value="Login" class="btn btn-white btn-outline"
-                            onclick="$('body').addClass('success');">
+                    <button type="submit" value="Login" class="btn btn-white btn-outline">
                         {{ trans('anomaly.module.users::button.login') }}
                     </button>
                 </div>
