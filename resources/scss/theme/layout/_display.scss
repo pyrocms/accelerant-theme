@@ -92,6 +92,19 @@
                 padding-bottom: 5px;
             }
         }
+        
+        #menu {
+            left: 40px;
+            width: 135px;
+        }
+        #sidebar, #topbar .topbar-left {
+            width: 40px;
+        }
+        #main {
+            margin-left: 176px;
+        }
+            
+            
 
         // Haven't been able to verify this, but it looks specific enough
         // to trust
