@@ -37,7 +37,7 @@
                      */
                     const click = document.createEvent('MouseEvents');
                     click.initEvent('click', true, false);
-                    event.target.dispatchEvent(click);
+                    toggle.dispatchEvent(click);
                 }
             });
         };
