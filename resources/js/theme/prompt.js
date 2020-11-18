@@ -10,23 +10,23 @@
 
             event.preventDefault();
 
-            let match = event.target.dataset.match;
+            let match = toggle.dataset.match;
 
             let config = {
-                text: event.target.dataset.message.replace(':match:', match),
-                title: event.target.dataset.title || null,
-                icon: event.target.dataset.icon || null,
-                closeOnEsc: event.target.dataset.esc == undefined ? false : (event.target.dataset.esc == 'true'),
-                closeOnClickOutside: event.target.dataset.outside == undefined ? false : (event.target.dataset.outside == 'true'),
+                text: toggle.dataset.message.replace(':match:', match),
+                title: toggle.dataset.title || null,
+                icon: toggle.dataset.icon || null,
+                closeOnEsc: toggle.dataset.esc == undefined ? false : (toggle.dataset.esc == 'true'),
+                closeOnClickOutside: toggle.dataset.outside == undefined ? false : (toggle.dataset.outside == 'true'),
                 content: "input",
                 buttons: {
                     cancel: {
                         visible: true,
-                        text: event.target.dataset.cancel_text || 'Cancel'
+                        text: toggle.dataset.cancel_text || 'Cancel'
                     },
                     confirm: {
-                        closeModal: event.target.dataset.close == undefined ? false : (event.target.dataset.close == 'true'),
-                        text: event.target.dataset.confirm_text || 'Yes'
+                        closeModal: toggle.dataset.close == undefined ? false : (toggle.dataset.close == 'true'),
+                        text: toggle.dataset.confirm_text || 'Yes'
                     },
                 }
             };
@@ -52,7 +52,7 @@
                      */
                     const click = document.createEvent('MouseEvents');
                     click.initEvent('click', true, false);
-                    event.target.dispatchEvent(click);
+                    toggle.dispatchEvent(click);
                 } else {
 
                     swal(config).then(callback);
