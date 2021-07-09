@@ -3,8 +3,8 @@
     {% import _self as self %}
 
     <li class="{{ section.highlighted ? 'highlighted' }} {{ section.active ? 'active' }} {{ section.class }}">
-
-        <a {{ html_attributes(section.attributes) }}>
+        
+        <a {{ section.isHeadingOnly() ?: html_attributes(section.attributes) }}>
             {{ section.icon ? icon(section.icon)|raw }}
             {{ trans(section.title)|raw }}
 
@@ -15,7 +15,7 @@
             {% endif %}
         </a>
 
-        {% if section.highlighted %}
+        {% if section.highlighted or section.isHeadingOnly() %}
             <ul>
                 {% for child in sections.children(section.slug).visible() %}
                     {{ self.sections(sections, child) }}
