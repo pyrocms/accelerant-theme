@@ -17,7 +17,7 @@
         background: $gradient !important;
     }
 
-    .variant-#{$index} .variant-background-pattern, .variant-#{$index}-background-pattern {
-        background-image: url('{{ img("theme::img/bg.svg").path }}'), $gradient !important;
-    }
+    // .variant-#{$index} .variant-background-pattern, .variant-#{$index}-background-pattern {
+    //     background-image: url('{{ img("theme::img/bg.svg").path }}'), $gradient !important;
+    // }
 }
