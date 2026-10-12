@@ -26,7 +26,7 @@
 
                 {% include "theme::partials/messages" %}
 
-                {% set form = form('login').redirect('admin').get() %}
+                {% set form = form('login').redirect('admin').context('admin').get() %}
 
                 {{ form.open({'id': 'login'})|raw }}
 
