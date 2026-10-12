@@ -1,0 +1,74 @@
+{% extends "pyrocms.theme.accelerant::layouts/login" %}
+
+{% block content %}
+
+    {% include "theme::addons/anomaly/users-module/admin/two_factor/partials/header" %}
+
+    <div class="login-container variant-background-pattern">
+        <div class="login-wrapper container-fluid">
+
+            <div class="logo">
+                {{ img('theme::img/icon.svg').data|raw }}
+            </div>
+
+            <div class="col-sm-12 offset-sm-6">
+
+                {% include "theme::partials/messages" %}
+
+                <p>{{ trans('anomaly.module.users::message.two_factor_' ~ method) }}</p>
+
+                {% set form = form('two_factor_challenge').context(context).get() %}
+
+                {{ form.open({'id': 'two-factor'})|raw }}
+
+                <div class="form-group">
+                    {{ form.fields.code.addAttribute('autofocus', 1).input|raw }}
+                </div>
+
+                <div class="form-group pull-right">
+                    <button type="submit" class="btn btn-white btn-outline">
+                        {{ trans('anomaly.module.users::button.verify') }}
+                    </button>
+                </div>
+
+                {{ form.close|raw }}
+
+                <div class="clearfix"></div>
+
+                <small>{{ trans('anomaly.module.users::message.two_factor_recovery') }}</small>
+
+                {% if method == 'email' %}
+                    <form method="post" action="{{ url_to('admin/two-factor/email') }}" class="mt-1 mb-1">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="purpose" value="verify">
+                        <button type="submit" class="btn btn-sm btn-white btn-outline">
+                            {{ trans('anomaly.module.users::button.send_code') }}
+                        </button>
+                    </form>
+                {% elseif 'email' in methods %}
+                    <form method="get" action="{{ url_to('admin/two-factor') }}" class="mt-1 mb-1">
+                        <input type="hidden" name="method" value="email">
+                        <button type="submit" class="btn btn-sm btn-white btn-outline">
+                            {{ trans('anomaly.module.users::button.send_code') }}
+                        </button>
+                    </form>
+                {% else %}
+                    <br>
+                {% endif %}
+
+                {% if method == 'email' and 'authenticator' in methods %}
+                    <a href="{{ url_to('admin/two-factor?method=authenticator') }}">
+                        <small>{{ trans('anomaly.module.users::button.use_app') }}</small>
+                    </a>
+                    <br>
+                {% endif %}
+
+                <a href="{{ url_to('admin/logout') }}">
+                    <small>{{ trans('anomaly.module.users::button.logout') }}</small>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

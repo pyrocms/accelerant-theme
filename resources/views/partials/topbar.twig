@@ -111,6 +111,14 @@
                                 {{ trans('theme::control_panel.view_site') }}
                             </a>
                         </li>
+                        {% if config('anomaly.module.users::two_factor.admin') in ['optional', 'required'] %}
+                            <li class="dropdown-item">
+                                <a href="/admin/two-factor/manage">
+                                    <i class="fa fa-shield"></i>
+                                    {{ trans('anomaly.module.users::button.two_factor') }}
+                                </a>
+                            </li>
+                        {% endif %}
                         <li class="dropdown-item">
                             <a href="/admin/logout">
                                 <i class="fa fa-power-off"></i>

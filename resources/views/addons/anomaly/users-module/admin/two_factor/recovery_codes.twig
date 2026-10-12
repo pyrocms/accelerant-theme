@@ -1,0 +1,32 @@
+{% extends "pyrocms.theme.accelerant::layouts/login" %}
+
+{% block content %}
+
+    {% include "theme::addons/anomaly/users-module/admin/two_factor/partials/header" %}
+
+    <div class="login-container variant-background-pattern">
+        <div class="login-wrapper container-fluid">
+
+            <div class="logo">
+                {{ img('theme::img/icon.svg').data|raw }}
+            </div>
+
+            <div class="col-sm-12 offset-sm-6">
+
+                {% include "theme::partials/messages" %}
+
+                <h4>{{ trans('anomaly.module.users::message.two_factor_codes_title') }}</h4>
+
+                <p>{{ trans('anomaly.module.users::message.two_factor_recovery_save') }}</p>
+
+                {% include "anomaly.module.users::admin/two_factor/partials/codes" %}
+
+                <a href="{{ url_to('admin/two-factor/continue') }}" class="btn btn-white btn-outline">
+                    {{ trans('anomaly.module.users::button.continue') }}
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "pyrocms.theme.accelerant::layouts/login" %}
+
+{% block content %}
+
+    {% include "theme::addons/anomaly/users-module/admin/two_factor/partials/header" %}
+
+    <div class="login-container variant-background-pattern">
+        <div class="login-wrapper container-fluid">
+
+            <div class="logo">
+                {{ img('theme::img/icon.svg').data|raw }}
+            </div>
+
+            <div class="col-sm-12 offset-sm-6">
+
+                {% include "theme::partials/messages" %}
+
+                <h4>{{ trans('anomaly.module.users::message.two_factor_setup') }}</h4>
+
+                {% if not method %}
+
+                    <p>{{ trans('anomaly.module.users::message.two_factor_choose') }}</p>
+
+                    {% for option in methods %}
+                        <a href="{{ url_to('admin/two-factor/setup?method=' ~ option) }}" class="btn btn-white btn-outline">
+                            {{ trans('anomaly.module.users::setting.two_factor_admin_methods.option.' ~ option) }}
+                        </a>
+                    {% endfor %}
+
+                {% else %}
+
+                    {% if method == 'authenticator' %}
+
+                        <p>{{ trans('anomaly.module.users::message.two_factor_scan') }}</p>
+
+                        <div style="display: inline-block; padding: 8px; background: #fff;">{{ qr|raw }}</div>
+
+                        <p>
+                            <small>{{ trans('anomaly.module.users::message.two_factor_manual_key') }}</small><br>
+                            <code>{{ secret|split('', 4)|join(' ') }}</code>
+                        </p>
+
+                    {% else %}
+
+                        <p>{{ trans('anomaly.module.users::message.two_factor_email_setup', {'email': user.email}) }}</p>
+
+                        <form method="post" action="{{ url_to('admin/two-factor/email') }}" class="mb-1">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="purpose" value="setup">
+                            <button type="submit" class="btn btn-sm btn-white btn-outline">
+                                {{ trans('anomaly.module.users::button.send_code') }}
+                            </button>
+                        </form>
+
+                    {% endif %}
+
+                    {% set form = form('two_factor_setup').context(context).get() %}
+
+                    {{ form.open({'id': 'two-factor'})|raw }}
+
+                    <div class="form-group">
+                        {{ form.fields.code.addAttribute('autofocus', 1).input|raw }}
+                    </div>
+
+                    <div class="form-group pull-right">
+                        <button type="submit" class="btn btn-white btn-outline">
+                            {{ trans('anomaly.module.users::button.verify') }}
+                        </button>
+                    </div>
+
+                    {{ form.close|raw }}
+
+                    <div class="clearfix"></div>
+
+                    {% if methods|length > 1 %}
+                        {% set other = method == 'email' ? 'authenticator' : 'email' %}
+                        <a href="{{ url_to('admin/two-factor/setup?method=' ~ other) }}">
+                            <small>{{ trans('anomaly.module.users::setting.two_factor_admin_methods.option.' ~ other) }}</small>
+                        </a>
+                        <br>
+                    {% endif %}
+
+                {% endif %}
+
+                <a href="{{ url_to('admin/logout') }}">
+                    <small>{{ trans('anomaly.module.users::button.logout') }}</small>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

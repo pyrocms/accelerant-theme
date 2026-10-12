@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    {{ asset_inline('pyrocms.theme.accelerant::js/theme/login.js') }}
+</script>
+
+<div class="logo-container">
+    <div class="logo">
+        {{ img('theme::img/icon.svg').data|raw }}
+        PYRO
+        <span>{{ config('streams::distribution.version') }}</span>
+    </div>
+    <div class="overlay"></div>
+</div>
